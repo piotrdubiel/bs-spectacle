@@ -1,0 +1,21 @@
+{
+  "name": "example",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "bsb -make-world && react-scripts build",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "reason-react": ">=0.3.0",
+    "bs-spectacle": "./.."
+  },
+  "devDependencies": {
+    "bs-platform": "^2.1.0",
+    "spectacle-scripts": "^2.0.0"
+  }
+}

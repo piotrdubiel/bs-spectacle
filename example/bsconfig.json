@@ -1,0 +1,12 @@
+{
+  "name": "example",
+  "reason": { "react-jsx": 2 },
+  "sources": ["src"],
+  "suffix": ".js",
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "bs-dependencies": ["reason-react", "bs-spectacle"],
+  "refmt": 3
+}

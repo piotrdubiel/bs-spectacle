@@ -1,0 +1,16 @@
+{
+  "name": "spectacle",
+  "version": "0.1.0",
+  "reason": { "react-jsx": 2 },
+  "refmt": 3,
+  "namespace": true,
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": {
+        "dir": "components"
+      }
+    }
+  ],
+  "bs-dependencies": ["reason-react"]
+}
