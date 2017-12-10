@@ -7,8 +7,9 @@ let make =
       ~controls: option(bool)=?,
       ~contentHeight: option(int)=?,
       ~contentWidth: option(int)=?,
+      /* TODO implement history, right now it's abstract*/
       ~history: option(history)=?,
-      ~progress: progress=`pacman,
+      ~progress: option(progress)=?,
       ~theme: option(Theme.theme)=?,
       ~transition: array(transition)=[||],
       ~transitionDuration: option(int)=?,
@@ -18,17 +19,20 @@ let make =
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props={
-      "controls": Js.Nullable.from_opt(controls),
-      "contentHeight": Js.Nullable.from_opt(contentHeight),
-      "contentWidth": Js.Nullable.from_opt(contentWidth),
-      "history": Js.Nullable.from_opt(history),
-      "progress": progressToJs(progress),
-      "theme": Js.Nullable.from_opt(theme),
-      "transition": Array.map(transitionToJs, transition),
-      "transitionDuration": Js.Nullable.from_opt(transitionDuration),
-      "autoplay": Js.Nullable.from_opt(autoplay),
-      "autoplayDuration": Js.Nullable.from_opt(autoplayDuration)
-    },
+    ~props=
+      Js.Nullable.(
+        {
+          "controls": Option.to_js_boolean(controls),
+          "contentHeight": from_opt(contentHeight),
+          "contentWidth": from_opt(contentWidth),
+          "history": from_opt(history),
+          "progress": Option.map(progressToJs, progress),
+          "theme": from_opt(theme),
+          "transition": Array.map(transitionToJs, transition),
+          "transitionDuration": from_opt(transitionDuration),
+          "autoplay": Option.to_js_boolean(autoplay),
+          "autoplayDuration": from_opt(autoplayDuration)
+        }
+      ),
     children
   );

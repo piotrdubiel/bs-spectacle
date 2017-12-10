@@ -39,9 +39,9 @@ let component = ReasonReact.reducerComponent("Presentation");
 let make = (_children) => {
   ...component,
   initialState: () => {steps: 0},
-  reducer: (action, state) =>
+  reducer: (action, _state) =>
     switch action {
-    | UpdateSteps(steps) => ReasonReact.Update({...state, steps})
+    | UpdateSteps(steps) => ReasonReact.Update({steps: steps})
     | NoUpdate => ReasonReact.NoUpdate
     },
   render: ({state, reduce}) => {

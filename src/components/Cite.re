@@ -23,24 +23,24 @@ let make =
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props={
-      "italic": Js.Nullable.from_opt(italic),
-      "bold": Js.Nullable.from_opt(bold),
-      "caps": Js.Nullable.from_opt(caps),
-      "margin": Js.Nullable.from_opt(margin),
-      "padding": Js.Nullable.from_opt(padding),
-      "textColor": Js.Nullable.from_opt(textColor),
-      "textSize": Js.Nullable.from_opt(textSize),
-      "textAlign": Js.Nullable.from_opt(textAlign),
-      "textFont": Js.Nullable.from_opt(textFont),
-      "bgColor": Js.Nullable.from_opt(bgColor),
-      "bgImage": Js.Nullable.from_opt(bgImage),
-      "bgSize": Js.Nullable.from_opt(bgSize),
-      "bgPosition": Js.Nullable.from_opt(bgPosition),
-      "bgRepeat": Js.Nullable.from_opt(bgRepeat),
-      "bgDarken": Js.Nullable.from_opt(bgDarken),
-      "overflow": Js.Nullable.from_opt(overflow),
-      "height": Js.Nullable.from_opt(height)
-    },
+    ~props=Js.Nullable.({
+      "italic": Option.to_js_boolean(italic),
+      "bold": Option.to_js_boolean(bold),
+      "caps": Option.to_js_boolean(caps),
+      "margin": from_opt(margin),
+      "padding": from_opt(padding),
+      "textColor": from_opt(textColor),
+      "textSize": from_opt(textSize),
+      "textAlign": from_opt(textAlign),
+      "textFont": from_opt(textFont),
+      "bgColor": from_opt(bgColor),
+      "bgImage": from_opt(bgImage),
+      "bgSize": from_opt(bgSize),
+      "bgPosition": from_opt(bgPosition),
+      "bgRepeat": from_opt(bgRepeat),
+      "bgDarken": from_opt(bgDarken),
+      "overflow": from_opt(overflow),
+      "height": from_opt(height)
+    }),
     children
   );

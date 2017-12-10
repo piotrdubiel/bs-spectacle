@@ -31,8 +31,11 @@ let make =
       ~notes: option(string)=?,
       ~onActive: option((int => unit))=?,
       ~progressColor: option(string)=?,
+      /* TODO support transition function */
       ~transition: array(transition)=[||],
+      /* TODO support transition function */
       ~transitionIn: array(transition)=[||],
+      /* TODO support transition function */
       ~transitionOut: array(transition)=[||],
       ~transitionDuration: option(int)=?,
       ~getAppearStep: option((int => unit))=?,
@@ -40,39 +43,42 @@ let make =
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props={
-      "italic": Js.Nullable.from_opt(italic),
-      "bold": Js.Nullable.from_opt(bold),
-      "caps": Js.Nullable.from_opt(caps),
-      "margin": Js.Nullable.from_opt(margin),
-      "padding": Js.Nullable.from_opt(padding),
-      "textColor": Js.Nullable.from_opt(textColor),
-      "textSize": Js.Nullable.from_opt(textSize),
-      "textAlign": Js.Nullable.from_opt(textAlign),
-      "textFont": Js.Nullable.from_opt(textFont),
-      "bgColor": Js.Nullable.from_opt(bgColor),
-      "bgImage": Js.Nullable.from_opt(bgImage),
-      "bgSize": Js.Nullable.from_opt(bgSize),
-      "bgPosition": Js.Nullable.from_opt(bgPosition),
-      "bgRepeat": Js.Nullable.from_opt(bgRepeat),
-      "bgDarken": Js.Nullable.from_opt(bgDarken),
-      "overflow": Js.Nullable.from_opt(overflow),
-      "height": Js.Nullable.from_opt(height),
-      /* Slide specific props */
-      "align": Js.Nullable.from_opt(align),
-      "controlColor": Js.Nullable.from_opt(controlColor),
-      "goTo": Js.Nullable.from_opt(goTo),
-      "id": Js.Nullable.from_opt(id),
-      "maxHeight": Js.Nullable.from_opt(maxHeight),
-      "maxWidth": Js.Nullable.from_opt(maxWidth),
-      "notes": Js.Nullable.from_opt(notes),
-      "onActive": Js.Nullable.from_opt(onActive),
-      "progressColor": Js.Nullable.from_opt(progressColor),
-      "transition": transition,
-      "transitionIn": transitionIn,
-      "transitionOut": transitionOut,
-      "transitionDuration": Js.Nullable.from_opt(transitionDuration),
-      "getAppearStep": Js.Nullable.from_opt(getAppearStep)
-    },
+    ~props=
+      Js.Nullable.(
+        {
+          "italic": Option.to_js_boolean(italic),
+          "bold": Option.to_js_boolean(bold),
+          "caps": Option.to_js_boolean(caps),
+          "margin": from_opt(margin),
+          "padding": from_opt(padding),
+          "textColor": from_opt(textColor),
+          "textSize": from_opt(textSize),
+          "textAlign": from_opt(textAlign),
+          "textFont": from_opt(textFont),
+          "bgColor": from_opt(bgColor),
+          "bgImage": from_opt(bgImage),
+          "bgSize": from_opt(bgSize),
+          "bgPosition": from_opt(bgPosition),
+          "bgRepeat": from_opt(bgRepeat),
+          "bgDarken": from_opt(bgDarken),
+          "overflow": from_opt(overflow),
+          "height": from_opt(height),
+          /* Slide specific props */
+          "align": from_opt(align),
+          "controlColor": from_opt(controlColor),
+          "goTo": from_opt(goTo),
+          "id": from_opt(id),
+          "maxHeight": from_opt(maxHeight),
+          "maxWidth": from_opt(maxWidth),
+          "notes": from_opt(notes),
+          "onActive": from_opt(onActive),
+          "progressColor": from_opt(progressColor),
+          "transition": Array.map(transitionToJs, transition),
+          "transitionIn": Array.map(transitionToJs, transitionIn),
+          "transitionOut": Array.map(transitionToJs, transitionOut),
+          "transitionDuration": from_opt(transitionDuration),
+          "getAppearStep": from_opt(getAppearStep)
+        }
+      ),
     children
   );
