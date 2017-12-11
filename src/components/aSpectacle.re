@@ -21,12 +21,6 @@ module List = {
     );
 };
 
-module ListItem = {
-  [@bs.module "spectacle"] external listItemReactClass : ReasonReact.reactClass = "ListItem";
-  let make = (children) =>
-    ReasonReact.wrapJsForReason(~reactClass=listItemReactClass, ~props=Js.Obj.empty(), children);
-};
-
 module Notes = {
   [@bs.module "spectacle"] external notesReactClass : ReasonReact.reactClass = "Notes";
   let make = (children) =>

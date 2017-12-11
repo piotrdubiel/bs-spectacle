@@ -4,8 +4,7 @@
 - [~] Deck
 - [~] Slide (Base)
 - [ ] Notes
-- [ ] MarkdownSlides
-- [ ] Layout
+- [x] Layout
 - [x] Fit
 - [x] Fill
 - [x] Markdown
@@ -19,13 +18,14 @@
 - [x] Heading (Base)
 - [x] Image (Base)
 - [x] Link (Base)
-- [ ] List & ListItem (Base)
+- [x] List & ListItem (Base)
 - [ ] S (Base)
-- [ ] Table, TableRow, TableBody, TableHeader, TableHeaderItem and TableItem (Base)
+- [x] Table, TableRow, TableBody, TableHeader, TableHeaderItem and TableItem (Base)
 - [x] Text (Base)
 - [ ] Typeface
 
 ## APIs
 - [x] Theme
 - [ ] Transition Function
-
+- [x] MarkdownSlides
+- [ ] Preloader
