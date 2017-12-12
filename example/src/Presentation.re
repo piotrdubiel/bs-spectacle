@@ -26,6 +26,8 @@ let images: images = {
   markdown: [%raw {| require('./assets/markdown.png')|}]
 };
 
+Preloader.load(images);
+
 let s = ReasonReact.stringToElement;
 
 type state = {steps: int};

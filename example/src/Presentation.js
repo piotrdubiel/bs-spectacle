@@ -33,6 +33,7 @@ var BlockQuote$BsSpectacle          = require("bs-spectacle/src/components/Block
 var GoToAction$BsSpectacle          = require("bs-spectacle/src/components/GoToAction.js");
 var TableHeader$BsSpectacle         = require("bs-spectacle/src/components/TableHeader.js");
 var TableHeaderItem$BsSpectacle     = require("bs-spectacle/src/components/TableHeaderItem.js");
+var Preloader                       = require("spectacle/src/utils/preloader");
 var ComponentPlayground$BsSpectacle = require("bs-spectacle/src/components/ComponentPlayground.js");
 
 var theme = Theme$BsSpectacle.createTheme(/* record */[
@@ -74,6 +75,8 @@ var images = /* record */[
   images_002,
   images_003
 ];
+
+Preloader.default(images);
 
 function s(prim) {
   return prim;

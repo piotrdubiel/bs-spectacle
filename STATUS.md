@@ -28,4 +28,4 @@
 - [x] Theme
 - [ ] Transition Function
 - [x] MarkdownSlides
-- [ ] Preloader
+- [x] Preloader
