@@ -1,5 +1,9 @@
 # Status
 
+[x] - means it's done
+[~] - moreless finished
+[ ] - not even touched
+
 ## Components
 - [~] Deck
 - [~] Slide (Base)
