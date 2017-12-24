@@ -1,7 +1,24 @@
 [@bs.deriving jsConverter]
 type progress = [ | `pacman | `bar | `number | `none];
 
-[@bs.deriving jsConverter]
-type transition = [ | `slide | `zoom | `fade | `spin];
+type functionTransition = (~transitioning: bool, ~forward: bool, unit) => ReactDOMRe.Style.t;
 
-type history;
+type transition =
+  | Slide
+  | Zoom
+  | Fade
+  | Spin
+  | Custom(functionTransition);
+
+let transitionToJs = (transition) =>
+  switch transition {
+  | Slide => Obj.magic("slide")
+  | Zoom => Obj.magic("zoom")
+  | Fade => Obj.magic("fade")
+  | Spin => Obj.magic("spin")
+  | Custom(f) =>
+    Obj.magic(
+      (transitioning, forward) =>
+        f(~transitioning=Js.to_bool(transitioning), ~forward=Js.to_bool(forward), ())
+    )
+  };

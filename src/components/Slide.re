@@ -31,11 +31,8 @@ let make =
       ~notes: option(string)=?,
       ~onActive: option((int => unit))=?,
       ~progressColor: option(string)=?,
-      /* TODO support transition function */
       ~transition: array(transition)=[||],
-      /* TODO support transition function */
       ~transitionIn: array(transition)=[||],
-      /* TODO support transition function */
       ~transitionOut: array(transition)=[||],
       ~transitionDuration: option(int)=?,
       ~getAppearStep: option((int => unit))=?,

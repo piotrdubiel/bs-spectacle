@@ -4,13 +4,9 @@
 
 ## Status
 
-- [x] - means it's done
-- [~] - moreless finished
-- [ ] - not even touched
-
 ### Components
-- [~] Deck
-- [~] Slide (Base)
+- [x] Deck
+- [x] Slide (Base)
 - [ ] Notes
 - [x] Layout
 - [x] Fit
@@ -34,9 +30,10 @@
 
 ### APIs
 - [x] Theme
-- [ ] Transition Function
+- [x] Transition Function
 - [x] MarkdownSlides
 - [x] Preloader
+- [ ] History
 
 ## Example
 

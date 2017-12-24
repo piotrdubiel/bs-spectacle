@@ -48,8 +48,8 @@ let make = (_children) => {
     },
   render: ({state, reduce}) => {
     let markdownLogo = images.markdown;
-    <Deck transition=[|`zoom, `slide|] theme transitionDuration=500>
-      <Slide transition=[|`zoom|] bgColor="primary">
+    <Deck transition=[|Zoom, Slide|] theme transitionDuration=500>
+      <Slide transition=[|Zoom|] bgColor="primary">
         <Heading size=1 fit=true caps=true lineHeight=1.0 textColor="black"> "Spectacle" </Heading>
         <Heading size=1 fit=true caps=true> "A ReactJS Presentation Library" </Heading>
         <Heading size=1 fit=true caps=true textColor="black">
@@ -67,7 +67,7 @@ let make = (_children) => {
         id="wait-what"
         goTo=4
         transition=[|
-          `fade
+          Fade
           /* (transitioning, forward) => {
                const angle = forward ? -180 : 180;
                return {
@@ -87,14 +87,14 @@ let make = (_children) => {
         </Heading>
       </Slide>
       <Slide
-        transitionIn=[|`zoom, `fade|]
-        transitionOut=[|`slide, `fade|]
+        transitionIn=[|Zoom, Fade|]
+        transitionOut=[|Slide, Fade|]
         bgColor="primary"
         notes="<ul><li>talk about that</li><li>and that</li></ul>">
         <CodePane lang="jsx" source=Examples.deck margin="20px auto" overflow="overflow" />
       </Slide>
       <Slide goTo=3> <ComponentPlayground theme=Dark /> </Slide>
-      <Slide transition=[|`slide|] bgImage=images.city bgDarken=0.75>
+      <Slide transition=[|Slide|] bgImage=images.city bgDarken=0.75>
         <Appear fid="1">
           <Heading size=1 caps=true fit=true textColor="primary"> (s("Full Width")) </Heading>
         </Appear>
@@ -138,7 +138,7 @@ let make = (_children) => {
         />
       </Slide>
       <Slide
-        transition=[|`slide|]
+        transition=[|Slide|]
         bgDarken=0.75
         getAppearStep=(reduce((steps) => state.steps != steps ? UpdateSteps(steps) : NoUpdate))>
         <Appear> <Heading size=1 caps=true textColor="tertiary"> "Can" </Heading> </Appear>
@@ -146,7 +146,7 @@ let make = (_children) => {
         <Appear> <Heading size=1 caps=true textColor="tertiary"> "Steps" </Heading> </Appear>
         <Heading size=1 caps=true fit=true textColor="secondary"> {j|Steps: $state|j} </Heading>
       </Slide>
-      <Slide transition=[|`zoom, `fade|] bgColor="primary">
+      <Slide transition=[|Zoom, Fade|] bgColor="primary">
         <Heading caps=true fit=true> "Flexible Layouts" </Heading>
         <Layout>
           <Fill>
@@ -161,14 +161,14 @@ let make = (_children) => {
           </Fill>
         </Layout>
       </Slide>
-      <Slide transition=[|`slide|] bgColor="black">
+      <Slide transition=[|Slide|] bgColor="black">
         <BlockQuote>
           <Quote> (s("Wonderfully formatted quotes")) </Quote>
           <Cite> (s("Ken Wheeler")) </Cite>
         </BlockQuote>
       </Slide>
       <Slide
-        transition=[|`spin, `zoom|]
+        transition=[|Spin, Zoom|]
         bgColor="tertiary"
         controlColor="primary"
         progressColor="primary">
@@ -194,14 +194,14 @@ Slides are separated with **three dashes** and can be used _anywhere_ in the dec
         |j}
         )
       )
-      <Slide transition=[|`slide, `spin|] bgColor="primary">
+      <Slide transition=[|Slide, Spin|] bgColor="primary">
         <Heading caps=true fit=true size=1 textColor="tertiary"> (s("Smooth")) </Heading>
         <Heading caps=true fit=true size=1 textColor="secondary">
           (s("Combinable Transitions"))
         </Heading>
       </Slide>
       <SlideSet>
-        <Slide transition=[|`fade|] bgColor="secondary" textColor="primary">
+        <Slide transition=[|Fade|] bgColor="secondary" textColor="primary">
           <List>
             <Appear> <ListItem> (s("Inline style based theme system")) </ListItem> </Appear>
             <Appear> <ListItem> (s("Autofit text")) </ListItem> </Appear>
@@ -210,14 +210,14 @@ Slides are separated with **three dashes** and can be used _anywhere_ in the dec
             <Appear> <ListItem> (s("And...")) </ListItem> </Appear>
           </List>
         </Slide>
-        <Slide transition=[|`slide|] bgColor="primary">
+        <Slide transition=[|Slide|] bgColor="primary">
           <Heading size=1 caps=true fit=true textColor="tertiary">
             (s("Your presentations are interactive"))
           </Heading>
           <Interactive />
         </Slide>
       </SlideSet>
-      <Slide transition=[|`slide|] bgColor="primary" notes="Hard to find cities without any pizza">
+      <Slide transition=[|Slide|] bgColor="primary" notes="Hard to find cities without any pizza">
         <Heading size=4 caps=true textColor="secondary" bgColor="white" margin="10px">
           (s("Pizza Toppings"))
         </Heading>
@@ -260,7 +260,7 @@ Slides are separated with **three dashes** and can be used _anywhere_ in the dec
           </Table>
         </Layout>
       </Slide>
-      <Slide transition=[|`spin, `slide|] bgColor="tertiary">
+      <Slide transition=[|Spin, Slide|] bgColor="tertiary">
         <Heading size=1 caps=true fit=true lineHeight=1.5 textColor="primary">
           (s("Made with love in Seattle by"))
         </Heading>

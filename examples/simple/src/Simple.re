@@ -14,16 +14,28 @@ let theme =
 
 let s = ReasonReact.stringToElement;
 
-let component = ReasonReact.statelessComponent("Easy");
+let component = ReasonReact.statelessComponent("Simple");
+
+let customTransition = (~transitioning, ~forward, ()) => {
+  let angle = forward ? (-180) : 180;
+  let translateY = transitioning ? 100 : 0;
+  let rotation = transitioning ? angle : 0;
+  let transform = {j|
+    translate3d(0%, $(translateY)%, 0)
+    rotate($(rotation)deg)
+    |j};
+  let backgroundColor = transitioning ? "#000" : "#26A0D1";
+  ReactDOMRe.Style.make(~transform, ~backgroundColor, ())
+};
 
 let make = (_children) => {
   ...component,
   render: (_self) =>
-    <Deck transition=[|`zoom, `slide|] theme>
+    <Deck transition=[|Zoom, Slide, Custom(customTransition)|] theme>
       <Slide>
         <Heading textColor="secondary" textFont="secondary"> (s("Hello, world")) </Heading>
       </Slide>
-      <Slide transition=[|`slide|] bgColor="secondary">
+      <Slide transition=[|Slide|] bgColor="secondary">
         <BlockQuote>
           <Quote> (s({js|It’s easy, see...|js})) </Quote>
           <Cite> (s("Unknown")) </Cite>

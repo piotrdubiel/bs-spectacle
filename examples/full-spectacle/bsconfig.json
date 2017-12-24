@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "full-spectacle",
   "reason": { "react-jsx": 2 },
   "sources": ["src"],
   "suffix": ".js",

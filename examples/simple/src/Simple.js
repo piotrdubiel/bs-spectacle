@@ -33,17 +33,30 @@ function s(prim) {
   return prim;
 }
 
-var component = ReasonReact.statelessComponent("Easy");
+var component = ReasonReact.statelessComponent("Simple");
+
+function customTransition(transitioning, forward, _) {
+  var angle = forward !== 0 ? -180 : 180;
+  var translateY = transitioning !== 0 ? 100 : 0;
+  var rotation = transitioning !== 0 ? angle : 0;
+  var transform = "\n    translate3d(0%, " + (String(translateY) + ("%, 0)\n    rotate(" + (String(rotation) + "deg)\n    ")));
+  var backgroundColor = transitioning !== 0 ? "#000" : "#26A0D1";
+  return {
+          backgroundColor: backgroundColor,
+          transform: transform
+        };
+}
 
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Deck$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[theme], /* Some */[/* array */[
-                        /* zoom */-789011693,
-                        /* slide */-20462287
+      return ReasonReact.element(/* None */0, /* None */0, Deck$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* Some */[theme], /* Some */[/* array */[
+                        /* Zoom */1,
+                        /* Slide */0,
+                        /* Custom */[customTransition]
                       ]], /* None */0, /* None */0, /* None */0, /* array */[
                       ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, Heading$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */["Hello, world"]))])),
-                      ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[/* array */[/* slide */-20462287]], /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, BlockQuote$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[
+                      ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[/* array */[/* Slide */0]], /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, BlockQuote$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[
                                           ReasonReact.element(/* None */0, /* None */0, Quote$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */["It’s easy, see..."])),
                                           ReasonReact.element(/* None */0, /* None */0, Cite$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */["Unknown"]))
                                         ]))]))
@@ -52,8 +65,9 @@ function make() {
   return newrecord;
 }
 
-exports.theme     = theme;
-exports.s         = s;
-exports.component = component;
-exports.make      = make;
+exports.theme            = theme;
+exports.s                = s;
+exports.component        = component;
+exports.customTransition = customTransition;
+exports.make             = make;
 /* theme Not a pure module */
