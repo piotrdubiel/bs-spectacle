@@ -24,15 +24,15 @@ let customTransition = (~transitioning, ~forward, ()) => {
     translate3d(0%, $(translateY)%, 0)
     rotate($(rotation)deg)
     |j};
-  let backgroundColor = transitioning ? "#000" : "#26A0D1";
+  let backgroundColor = transitioning ? "#fff" : "#26A0D1";
   ReactDOMRe.Style.make(~transform, ~backgroundColor, ())
 };
 
 let make = (_children) => {
   ...component,
   render: (_self) =>
-    <Deck transition=[|Zoom, Slide, Custom(customTransition)|] theme>
-      <Slide>
+    <Deck transition=[|Zoom, Slide|] theme>
+      <Slide transition=[|Custom(customTransition)|]>
         <Heading textColor="secondary" textFont="secondary"> (s("Hello, world")) </Heading>
       </Slide>
       <Slide transition=[|Slide|] bgColor="secondary">
@@ -41,9 +41,9 @@ let make = (_children) => {
           <Cite> (s("Unknown")) </Cite>
         </BlockQuote>
       </Slide>
-      <Slide>
+      <Slide bgColor="secondary">
         <ComponentPlayground
-          previewBackgroundColor="#46C0F1"
+          previewBackgroundColor="#26A0D1"
           code={js|
 log("This log is provided thanks to SCOPE!")
 
