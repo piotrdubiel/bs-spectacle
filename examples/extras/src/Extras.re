@@ -77,12 +77,16 @@ render(<HelloWorld name="Spectacle" />)
         <Slide bgColor="secondary">
           <Heading size=3> (s({js|It’s a kind of magic...|js})) </Heading>
         </Slide>
-        <Slide bgColor="secondary">
-          <Code> (s("<Magic></Magic>")) </Code>
-        </Slide>
+        <Slide bgColor="secondary"> <Code> (s("<Magic></Magic>")) </Code> </Slide>
       </Magic>
-      <Slide>
-        <S type_=`strikethrough> (s("Not important")) </S>
+      <Slide> <S type_=`strikethrough> (s("Not important")) </S> </Slide>
+      <Slide bgColor="secondary">
+        <Typeface googleFont="Roboto Slab" weight=700>
+          <Text> (s("This text is using bold Roboto Slab from Google Fonts.")) </Text>
+        </Typeface>
+        <Typeface font="Helvetica" weight=400 italic=true>
+          <Text> (s("This text is using the Helvetica font from the system.")) </Text>
+        </Typeface>
       </Slide>
     </Deck>
 };

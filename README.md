@@ -26,7 +26,7 @@
 - [x] S (Base)
 - [x] Table, TableRow, TableBody, TableHeader, TableHeaderItem and TableItem (Base)
 - [x] Text (Base)
-- [ ] Typeface
+- [x] Typeface
 
 ### APIs
 - [x] Theme
