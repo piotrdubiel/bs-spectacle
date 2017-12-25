@@ -38,6 +38,7 @@
 ## Example
 
 See `examples/full-spectacle`. It uses _almost_ all features of **Spectacle**.
+
 `examples/extras` aims to showcase features not included in original Spectacle example.
 
 ```reason
@@ -62,11 +63,11 @@ let component = ReasonReact.statelessComponent("Simple");
 let make = (_children) => {
   ...component,
   render: (_self) =>
-    <Deck transition=[|`zoom, `slide|] theme>
+    <Deck transition=[|Zoom, Slide|] theme>
       <Slide>
         <Heading textColor="secondary" textFont="secondary"> (s("Hello, world")) </Heading>
       </Slide>
-      <Slide transition=[|`slide|] bgColor="secondary">
+      <Slide transition=[|Slide|] bgColor="secondary">
         <BlockQuote>
           <Quote> (s({js|It’s easy, see...|js})) </Quote>
           <Cite> (s("Unknown")) </Cite>
