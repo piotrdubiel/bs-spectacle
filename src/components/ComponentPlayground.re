@@ -6,13 +6,18 @@ type componentPlaygroundTheme =
   | Light
   | Dark;
 
+let componentPlaygroundThemeToJs = (theme) =>
+  switch theme {
+  | Light => "light"
+  | Dark => "dark"
+  };
+
 let make =
     (
       ~code: option(string)=?,
       ~previewBackgroundColor: option(string)=?,
       ~theme: option(componentPlaygroundTheme)=?,
-      /* TODO it's abstract, figure it out */
-      ~scope: option(scope)=?,
+      ~scope: option(Js.t('a))=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
@@ -22,7 +27,7 @@ let make =
         {
           "code": from_opt(code),
           "previewBackgroundColor": from_opt(previewBackgroundColor),
-          "theme": from_opt(theme),
+          "theme": Option.map(componentPlaygroundThemeToJs, theme) |> from_opt,
           "scope": from_opt(scope)
         }
       ),

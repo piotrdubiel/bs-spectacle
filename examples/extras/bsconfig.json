@@ -1,5 +1,5 @@
 {
-  "name": "simple",
+  "name": "extras",
   "reason": { "react-jsx": 2 },
   "sources": ["src"],
   "suffix": ".js",

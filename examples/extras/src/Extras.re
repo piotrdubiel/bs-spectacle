@@ -14,7 +14,7 @@ let theme =
 
 let s = ReasonReact.stringToElement;
 
-let component = ReasonReact.statelessComponent("Simple");
+let component = ReasonReact.statelessComponent("Extras");
 
 let customTransition = (~transitioning, ~forward, ()) => {
   let angle = forward ? (-180) : 180;
@@ -40,6 +40,33 @@ let make = (_children) => {
           <Quote> (s({js|It’s easy, see...|js})) </Quote>
           <Cite> (s("Unknown")) </Cite>
         </BlockQuote>
+      </Slide>
+      <Slide>
+        <ComponentPlayground
+          previewBackgroundColor="#46C0F1"
+          code={js|
+log("This log is provided thanks to SCOPE!")
+
+const styles = {
+  heading: {
+    fontSize: "2.25rem",
+    fontWeight: "bold"
+  }
+}
+
+const HelloWorld = ({ name }) => (
+  <div>
+    <h1 style={styles.heading}>
+      Create Live Code Examples in {name}!
+    </h1>
+  </div>
+)
+
+render(<HelloWorld name="Spectacle" />)
+         |js}
+          theme=Light
+          scope={"log": (msg: string) => Js.log2("FROM REASON:", msg)}
+        />
       </Slide>
     </Deck>
 };

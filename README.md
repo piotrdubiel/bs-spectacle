@@ -17,7 +17,7 @@
 - [x] BlockQuote, Quote and Cite (Base)
 - [x] CodePane (Base)
 - [ ] Code (Base)
-- [~] ComponentPlayground
+- [x] ComponentPlayground
 - [x] GoToAction (Base)
 - [x] Heading (Base)
 - [x] Image (Base)
