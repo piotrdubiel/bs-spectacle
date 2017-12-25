@@ -5,6 +5,7 @@ var React                           = require("react");
 var ReasonReact                     = require("reason-react/src/ReasonReact.js");
 var Cite$BsSpectacle                = require("bs-spectacle/src/components/Cite.js");
 var Deck$BsSpectacle                = require("bs-spectacle/src/components/Deck.js");
+var Magic$BsSpectacle               = require("bs-spectacle/src/components/Magic.js");
 var Notes$BsSpectacle               = require("bs-spectacle/src/components/Notes.js");
 var Quote$BsSpectacle               = require("bs-spectacle/src/components/Quote.js");
 var Slide$BsSpectacle               = require("bs-spectacle/src/components/Slide.js");
@@ -76,7 +77,14 @@ function make() {
                                                 console.log("FROM REASON:", msg);
                                                 return /* () */0;
                                               })
-                                          }], /* array */[]))]))
+                                          }], /* array */[]))])),
+                      ReasonReact.element(/* None */0, /* None */0, Magic$BsSpectacle.make(/* array */[
+                                ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, Heading$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[3], /* None */0, /* None */0, /* array */["It’s a kind of magic..."]))])),
+                                ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[
+                                          ReasonReact.element(/* None */0, /* None */0, Heading$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[3], /* None */0, /* None */0, /* array */["<Magic>"])),
+                                          ReasonReact.element(/* None */0, /* None */0, Heading$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[3], /* None */0, /* None */0, /* array */["</Magic>"]))
+                                        ]))
+                              ]))
                     ]));
     });
   return newrecord;

@@ -73,5 +73,14 @@ render(<HelloWorld name="Spectacle" />)
           scope={"log": (msg: string) => Js.log2("FROM REASON:", msg)}
         />
       </Slide>
+      <Magic>
+        <Slide bgColor="secondary">
+          <Heading size=3> (s({js|It’s a kind of magic...|js})) </Heading>
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading size=3> (s("<Magic>")) </Heading>
+          <Heading size=3> (s("</Magic>")) </Heading>
+        </Slide>
+      </Magic>
     </Deck>
 };

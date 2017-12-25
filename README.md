@@ -12,7 +12,7 @@
 - [x] Fit
 - [x] Fill
 - [x] Markdown
-- [ ] Magic
+- [x] Magic
 - [x] Appear
 - [x] BlockQuote, Quote and Cite (Base)
 - [x] CodePane (Base)
