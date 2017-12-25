@@ -8,7 +8,7 @@ let make =
       ~contentHeight: option(int)=?,
       ~contentWidth: option(int)=?,
       /* TODO implement history, right now it's abstract*/
-      /* ~history: option(history)=?, */
+      ~history: option('a)=?,
       ~progress: option(progress)=?,
       ~theme: option(Theme.theme)=?,
       ~transition: array(transition)=[||],
@@ -25,7 +25,7 @@ let make =
           "controls": Option.to_js_boolean(controls),
           "contentHeight": from_opt(contentHeight),
           "contentWidth": from_opt(contentWidth),
-          /* "history": from_opt(history), */
+          "history": from_opt(history),
           "progress": Option.map(progressToJs, progress),
           "theme": from_opt(theme),
           "transition": Array.map(transitionToJs, transition),

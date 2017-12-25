@@ -28,10 +28,16 @@ let customTransition = (~transitioning, ~forward, ()) => {
   ReactDOMRe.Style.make(~transform, ~backgroundColor, ())
 };
 
+let history = History.createBrowserHistory({
+  "basename": "",
+  "forceRefresh": Js.false_,
+  "keyLength": 6
+});
+
 let make = (_children) => {
   ...component,
   render: (_self) =>
-    <Deck transition=[|Zoom, Slide|] theme>
+    <Deck transition=[|Zoom, Slide|] theme history>
       <Slide transition=[|Custom(customTransition)|]>
         <Notes>
           <h1> (s("Introduction")) </h1>

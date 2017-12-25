@@ -9,10 +9,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bs-spectacle": "./../..",
+    "history": "^4.7.2",
     "react": "15.4.2",
     "react-dom": "15.4.2",
-    "reason-react": ">=0.3.0",
-    "bs-spectacle": "./../.."
+    "reason-react": ">=0.3.0"
   },
   "devDependencies": {
     "bs-platform": "^2.1.0",

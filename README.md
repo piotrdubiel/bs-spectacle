@@ -33,7 +33,7 @@
 - [x] Transition Function
 - [x] MarkdownSlides
 - [x] Preloader
-- [ ] History
+- [x] History
 
 ## Example
 

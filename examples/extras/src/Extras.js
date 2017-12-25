@@ -2,6 +2,7 @@
 'use strict';
 
 var React                           = require("react");
+var History                         = require("history");
 var ReasonReact                     = require("reason-react/src/ReasonReact.js");
 var S$BsSpectacle                   = require("bs-spectacle/src/components/S.js");
 var Cite$BsSpectacle                = require("bs-spectacle/src/components/Cite.js");
@@ -55,10 +56,16 @@ function customTransition(transitioning, forward, _) {
         };
 }
 
+var history = History.createBrowserHistory({
+      basename: "",
+      forceRefresh: false,
+      keyLength: 6
+    });
+
 function make() {
   var newrecord = component.slice();
   newrecord[/* render */9] = (function () {
-      return ReasonReact.element(/* None */0, /* None */0, Deck$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* Some */[theme], /* Some */[/* array */[
+      return ReasonReact.element(/* None */0, /* None */0, Deck$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* Some */[history], /* None */0, /* Some */[theme], /* Some */[/* array */[
                         /* Zoom */1,
                         /* Slide */0
                       ]], /* None */0, /* None */0, /* None */0, /* array */[
@@ -100,5 +107,6 @@ exports.theme            = theme;
 exports.s                = s;
 exports.component        = component;
 exports.customTransition = customTransition;
+exports.history          = history;
 exports.make             = make;
 /* theme Not a pure module */
