@@ -16,7 +16,7 @@
 - [x] Appear
 - [x] BlockQuote, Quote and Cite (Base)
 - [x] CodePane (Base)
-- [ ] Code (Base)
+- [x] Code (Base)
 - [x] ComponentPlayground
 - [x] GoToAction (Base)
 - [x] Heading (Base)

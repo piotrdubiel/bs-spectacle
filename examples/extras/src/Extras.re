@@ -78,8 +78,7 @@ render(<HelloWorld name="Spectacle" />)
           <Heading size=3> (s({js|It’s a kind of magic...|js})) </Heading>
         </Slide>
         <Slide bgColor="secondary">
-          <Heading size=3> (s("<Magic>")) </Heading>
-          <Heading size=3> (s("</Magic>")) </Heading>
+          <Code> (s("<Magic></Magic>")) </Code>
         </Slide>
       </Magic>
     </Deck>
