@@ -37,7 +37,8 @@
 
 ## Example
 
-See `example/`. It uses _almost_ all features of **Spectacle**.
+See `examples/full-spectacle`. It uses _almost_ all features of **Spectacle**.
+`examples/extras` aims to showcase features not included in original Spectacle example.
 
 ```reason
 open BsSpectacle;
@@ -56,7 +57,7 @@ let theme =
 
 let s = ReasonReact.stringToElement;
 
-let component = ReasonReact.statelessComponent("Easy");
+let component = ReasonReact.statelessComponent("Simple");
 
 let make = (_children) => {
   ...component,
