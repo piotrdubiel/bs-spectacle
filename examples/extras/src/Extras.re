@@ -81,5 +81,8 @@ render(<HelloWorld name="Spectacle" />)
           <Code> (s("<Magic></Magic>")) </Code>
         </Slide>
       </Magic>
+      <Slide>
+        <S type_=`strikethrough> (s("Not important")) </S>
+      </Slide>
     </Deck>
 };

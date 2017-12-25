@@ -23,7 +23,7 @@
 - [x] Image (Base)
 - [x] Link (Base)
 - [x] List & ListItem (Base)
-- [ ] S (Base)
+- [x] S (Base)
 - [x] Table, TableRow, TableBody, TableHeader, TableHeaderItem and TableItem (Base)
 - [x] Text (Base)
 - [ ] Typeface
