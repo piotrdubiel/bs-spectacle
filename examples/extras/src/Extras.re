@@ -33,9 +33,14 @@ let make = (_children) => {
   render: (_self) =>
     <Deck transition=[|Zoom, Slide|] theme>
       <Slide transition=[|Custom(customTransition)|]>
+        <Notes>
+          <h1> (s("Introduction")) </h1>
+          <ol> <li> (s("Clap your hands")) </li> <li> (s("Say yeah")) </li> </ol>
+        </Notes>
         <Heading textColor="secondary" textFont="secondary"> (s("Hello, world")) </Heading>
       </Slide>
-      <Slide transition=[|Slide|] bgColor="secondary">
+      <Slide transition=[|Slide|] bgColor="secondary" notes="It will be overwritten">
+        <Notes> (s("Overwriting notes from props")) </Notes>
         <BlockQuote>
           <Quote> (s({js|It’s easy, see...|js})) </Quote>
           <Cite> (s("Unknown")) </Cite>

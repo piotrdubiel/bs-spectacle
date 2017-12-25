@@ -7,7 +7,7 @@
 ### Components
 - [x] Deck
 - [x] Slide (Base)
-- [ ] Notes
+- [x] Notes
 - [x] Layout
 - [x] Fit
 - [x] Fill
