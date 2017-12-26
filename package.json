@@ -1,11 +1,12 @@
 {
   "name": "bs-spectacle",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "Spectacle bindings for Bucklescript",
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "clean": "bsb -clean-world",
+    "preversion": "npm run build"
   },
   "license": "MIT",
   "keywords": [
