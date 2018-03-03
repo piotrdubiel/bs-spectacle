@@ -4,4 +4,4 @@ let map = (f, x) =>
   | Some(x) => Some(f(x))
   };
 
-let to_js_boolean = (a) => a |> map(Js.Boolean.to_js_boolean) |> Js.Nullable.from_opt;
+let to_js_boolean = (a) => a |> map(Js.Boolean.to_js_boolean) |> Js.Nullable.fromOption;

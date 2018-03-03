@@ -13,9 +13,9 @@ let make =
     ~props=
       Js.Nullable.(
         {
-          "font": from_opt(font),
-          "googleFont": from_opt(googleFont),
-          "weight": from_opt(weight),
+          "font": fromOption(font),
+          "googleFont": fromOption(googleFont),
+          "weight": fromOption(weight),
           "italic": Option.to_js_boolean(italic)
         }
       ),

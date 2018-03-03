@@ -25,10 +25,10 @@ let make =
     ~props=
       Js.Nullable.(
         {
-          "code": from_opt(code),
-          "previewBackgroundColor": from_opt(previewBackgroundColor),
-          "theme": Option.map(componentPlaygroundThemeToJs, theme) |> from_opt,
-          "scope": from_opt(scope)
+          "code": fromOption(code),
+          "previewBackgroundColor": fromOption(previewBackgroundColor),
+          "theme": Option.map(componentPlaygroundThemeToJs, theme) |> fromOption,
+          "scope": fromOption(scope)
         }
       ),
     children
