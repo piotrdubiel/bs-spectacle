@@ -1,6 +1,6 @@
 {
   "name": "bs-spectacle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Spectacle bindings for Bucklescript",
   "scripts": {
     "build": "bsb -make-world",
