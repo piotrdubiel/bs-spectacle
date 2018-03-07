@@ -15,7 +15,7 @@
     "bs-spectacle": "./../.."
   },
   "devDependencies": {
-    "bs-platform": "^2.1.0",
+    "bs-platform": "^2.2.2",
     "spectacle-scripts": "^2.0.0"
   }
 }

@@ -21,7 +21,7 @@
     "url": "https://github.com/piotrdubiel/bs-spectacle.git"
   },
   "devDependencies": {
-    "bs-platform": "^2.1.0",
+    "bs-platform": "^2.2.2",
     "reason-react": "^0.3.0"
   },
   "peerDependencies": {

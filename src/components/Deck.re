@@ -23,15 +23,15 @@ let make =
       Js.Nullable.(
         {
           "controls": Option.to_js_boolean(controls),
-          "contentHeight": from_opt(contentHeight),
-          "contentWidth": from_opt(contentWidth),
-          "history": from_opt(history),
+          "contentHeight": fromOption(contentHeight),
+          "contentWidth": fromOption(contentWidth),
+          "history": fromOption(history),
           "progress": Option.map(progressToJs, progress),
-          "theme": from_opt(theme),
+          "theme": fromOption(theme),
           "transition": Array.map(transitionToJs, transition),
-          "transitionDuration": from_opt(transitionDuration),
+          "transitionDuration": fromOption(transitionDuration),
           "autoplay": Option.to_js_boolean(autoplay),
-          "autoplayDuration": from_opt(autoplayDuration)
+          "autoplayDuration": fromOption(autoplayDuration)
         }
       ),
     children
