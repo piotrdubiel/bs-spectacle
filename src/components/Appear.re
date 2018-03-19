@@ -1,8 +1,6 @@
 [@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Appear";
 
-let make = (~order: option(int)=?, ~fid: option(string)=?, children) =>
-  ReasonReact.wrapJsForReason(
-    ~reactClass,
-    ~props=Js.Nullable.({"order": fromOption(order), "fid": fromOption(fid)}),
-    children
-  );
+[@bs.obj] external makeProps : (~order: int=?, ~fid: string=?, unit) => _ = "";
+
+let make = (~order=?, ~fid=?, children) =>
+  ReasonReact.wrapJsForReason(~reactClass, ~props=makeProps(~order?, ~fid?, ()), children);
