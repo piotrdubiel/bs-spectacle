@@ -1,38 +1,54 @@
-open Types;
-
 [@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Deck";
+
+[@bs.obj]
+external makeProps :
+  (
+    ~controls: Js.boolean=?,
+    ~contentHeight: int=?,
+    ~contentWidth: int=?,
+    /* TODO implement history, right now it's abstract*/
+    ~history: 'a=?,
+    ~progress: string=?,
+    ~theme: Theme.theme=?,
+    ~transition: array(Types.transition)=?,
+    ~transitionDuration: int=?,
+    ~autoplay: Js.boolean=?,
+    ~autoplayDuration: int=?,
+    unit
+  ) =>
+  _ =
+  "";
 
 let make =
     (
-      ~controls: option(bool)=?,
-      ~contentHeight: option(int)=?,
-      ~contentWidth: option(int)=?,
+      ~controls=?,
+      ~contentHeight=?,
+      ~contentWidth=?,
       /* TODO implement history, right now it's abstract*/
-      ~history: option('a)=?,
-      ~progress: option(progress)=?,
-      ~theme: option(Theme.theme)=?,
-      ~transition: array(transition)=[||],
-      ~transitionDuration: option(int)=?,
-      ~autoplay: option(bool)=?,
-      ~autoplayDuration: option(int)=?,
+      ~history=?,
+      ~progress=?,
+      ~theme=?,
+      ~transition=?,
+      ~transitionDuration=?,
+      ~autoplay=?,
+      ~autoplayDuration=?,
       children
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-      Js.Nullable.(
-        {
-          "controls": Option.to_js_boolean(controls),
-          "contentHeight": fromOption(contentHeight),
-          "contentWidth": fromOption(contentWidth),
-          "history": fromOption(history),
-          "progress": Option.map(progressToJs, progress),
-          "theme": fromOption(theme),
-          "transition": Array.map(transitionToJs, transition),
-          "transitionDuration": fromOption(transitionDuration),
-          "autoplay": Option.to_js_boolean(autoplay),
-          "autoplayDuration": fromOption(autoplayDuration)
-        }
+      makeProps(
+        ~controls=?Types.to_js_boolean(controls),
+        ~contentHeight?,
+        ~contentWidth?,
+        ~history?,
+        ~progress=?Js.Option.map(Types.mapProgressToJs, progress),
+        ~theme?,
+        ~transition=?Types.mapTransitionsToJs(transition),
+        ~transitionDuration?,
+        ~autoplay=?Types.to_js_boolean(autoplay),
+        ~autoplayDuration?,
+        ()
       ),
     children
   );

@@ -6,3 +6,5 @@ npm-debug.log
 /lib/ocaml/
 /node_modules/
 /src/**/*.js
+yarn-error.log
+coverage/

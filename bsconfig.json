@@ -10,7 +10,15 @@
       "subdirs": {
         "dir": "components"
       }
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev",
+      "subdirs": {
+        "dir": "helpers"
+      }
     }
   ],
-  "bs-dependencies": ["reason-react"]
+  "bs-dependencies": ["reason-react"],
+  "bs-dev-dependencies": ["bs-enzyme", "bs-jest"]
 }

@@ -28,11 +28,8 @@ let customTransition = (~transitioning, ~forward, ()) => {
   ReactDOMRe.Style.make(~transform, ~backgroundColor, ())
 };
 
-let history = History.createBrowserHistory({
-  "basename": "",
-  "forceRefresh": Js.false_,
-  "keyLength": 6
-});
+let history =
+  History.createBrowserHistory({"basename": "", "forceRefresh": Js.false_, "keyLength": 6});
 
 let make = (_children) => {
   ...component,

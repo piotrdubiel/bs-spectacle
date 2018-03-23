@@ -1,50 +1,53 @@
 [@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "CodePane";
 
+[@bs.obj] external makeProps : (~lang: string, ~source: string, unit) => _ = "";
+
 let make =
     (
-      ~italic: option(bool)=?,
-      ~bold: option(bool)=?,
-      ~caps: option(bool)=?,
-      ~margin: option(string)=?,
-      ~padding: option(string)=?,
-      ~textColor: option(string)=?,
-      ~textSize: option(string)=?,
-      ~textAlign: option(string)=?,
-      ~textFont: option(string)=?,
-      ~bgColor: option(string)=?,
-      ~bgImage: option(string)=?,
-      ~bgSize: option(string)=?,
-      ~bgPosition: option(string)=?,
-      ~bgRepeat: option(string)=?,
-      ~bgDarken: option(float)=?,
-      ~overflow: option(string)=?,
+      ~italic=?,
+      ~bold=?,
+      ~caps=?,
+      ~margin=?,
+      ~padding=?,
+      ~textColor=?,
+      ~textSize=?,
+      ~textAlign=?,
+      ~textFont=?,
+      ~bgColor=?,
+      ~bgImage=?,
+      ~bgSize=?,
+      ~bgPosition=?,
+      ~bgRepeat=?,
+      ~bgDarken=?,
+      ~overflow=?,
+      ~height=?,
       /* CodePane specific props */
-      ~lang: string,
-      ~source: string,
+      ~lang,
+      ~source,
       children
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=Js.Nullable.({
-      "italic": Option.to_js_boolean(italic),
-      "bold": Option.to_js_boolean(bold),
-      "caps": Option.to_js_boolean(caps),
-      "margin": fromOption(margin),
-      "padding": fromOption(padding),
-      "textColor": fromOption(textColor),
-      "textSize": fromOption(textSize),
-      "textAlign": fromOption(textAlign),
-      "textFont": fromOption(textFont),
-      "bgColor": fromOption(bgColor),
-      "bgImage": fromOption(bgImage),
-      "bgSize": fromOption(bgSize),
-      "bgPosition": fromOption(bgPosition),
-      "bgRepeat": fromOption(bgRepeat),
-      "bgDarken": fromOption(bgDarken),
-      "overflow": fromOption(overflow),
-      /* CodePane specific props */
-      "lang": lang,
-      "source": source
-    }),
+    ~props=
+      BaseProps.extendProps(
+        makeProps(~lang, ~source, ()),
+        ~italic?,
+        ~bold?,
+        ~caps?,
+        ~margin?,
+        ~padding?,
+        ~textColor?,
+        ~textSize?,
+        ~textAlign?,
+        ~textFont?,
+        ~bgColor?,
+        ~bgImage?,
+        ~bgSize?,
+        ~bgPosition?,
+        ~bgRepeat?,
+        ~bgDarken?,
+        ~overflow?,
+        ~height?
+      ),
     children
   );

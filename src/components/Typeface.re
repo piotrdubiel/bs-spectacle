@@ -1,23 +1,13 @@
 [@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Typeface";
 
-let make =
-    (
-      ~font: option(string)=?,
-      ~googleFont: option(string)=?,
-      ~weight: option(int)=?,
-      ~italic: option(bool)=?,
-      children
-    ) =>
+[@bs.obj]
+external makeProps :
+  (~font: string=?, ~googleFont: string=?, ~weight: int=?, ~italic: Js.boolean=?, unit) => _ =
+  "";
+
+let make = (~font=?, ~googleFont=?, ~weight=?, ~italic=?, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=
-      Js.Nullable.(
-        {
-          "font": fromOption(font),
-          "googleFont": fromOption(googleFont),
-          "weight": fromOption(weight),
-          "italic": Option.to_js_boolean(italic)
-        }
-      ),
+    ~props=makeProps(~font?, ~googleFont?, ~weight?, ~italic=?Types.to_js_boolean(italic), ()),
     children
   );

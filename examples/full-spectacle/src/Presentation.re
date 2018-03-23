@@ -66,19 +66,7 @@ let make = (_children) => {
         onActive=((slideIndex) => Js.log({j|Viewing slide index: $slideIndex|j}))
         id="wait-what"
         goTo=4
-        transition=[|
-          Fade
-          /* (transitioning, forward) => {
-               const angle = forward ? -180 : 180;
-               return {
-                 transform: `
-                   translate3d(0%, ${transitioning ? 100 : 0}%, 0)
-                   rotate(${transitioning ? angle : 0}deg)
-                 `,
-                 backgroundColor: transitioning ? '#26afff' : '#000'
-               };
-             } */
-        |]
+        transition=[|Fade|]
         bgColor="black"
         notes="You can even put notes on your slide. How awesome is that?">
         <Image src=images.kat margin="0px auto 40px" />

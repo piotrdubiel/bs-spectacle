@@ -113,7 +113,7 @@ function make() {
                                 ]], /* Some */[/* array */[
                                   /* Slide */0,
                                   /* Fade */2
-                                ]], /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, CodePane$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* Some */["20px auto"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["overflow"], "jsx", Examples.deck, /* array */[]))])),
+                                ]], /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, CodePane$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* Some */["20px auto"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["overflow"], /* None */0, "jsx", Examples.deck, /* array */[]))])),
                       ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[3], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, ComponentPlayground$BsSpectacle.make(/* None */0, /* None */0, /* Some */[/* Dark */1], /* None */0, /* array */[]))])),
                       ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[images_000], /* None */0, /* None */0, /* None */0, /* Some */[0.75], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[/* array */[/* Slide */0]], /* None */0, /* None */0, /* None */0, /* None */0, /* array */[
                                 ReasonReact.element(/* None */0, /* None */0, Appear$BsSpectacle.make(/* None */0, /* Some */["1"], /* array */[ReasonReact.element(/* None */0, /* None */0, Heading$BsSpectacle.make(/* None */0, /* None */0, /* Some */[/* true */1], /* None */0, /* None */0, /* Some */["primary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[1], /* Some */[/* true */1], /* None */0, /* array */["Full Width"]))])),
@@ -169,9 +169,47 @@ function make() {
                                           ReasonReact.element(/* None */0, /* None */0, Fill$BsSpectacle.make(/* array */[ReasonReact.element(/* None */0, /* None */0, Heading$BsSpectacle.make(/* None */0, /* None */0, /* Some */[/* true */1], /* Some */["10"], /* None */0, /* Some */["secondary"], /* None */0, /* None */0, /* None */0, /* Some */["white"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[4], /* None */0, /* None */0, /* array */["Right"]))]))
                                         ]))
                               ])),
-                      ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["black"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[/* array */[/* Slide */0]], /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, BlockQuote$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */[
-                                          ReasonReact.element(/* None */0, /* None */0, Quote$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */["Wonderfully formatted quotes"])),
-                                          ReasonReact.element(/* None */0, /* None */0, Cite$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */["Ken Wheeler"]))
+                      ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["black"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */[/* array */[/* Slide */0]], /* None */0, /* None */0, /* None */0, /* None */0, /* array */[ReasonReact.element(/* None */0, /* None */0, Curry.app(BlockQuote$BsSpectacle.make, [
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* None */0,
+                                          /* array */[
+                                            ReasonReact.element(/* None */0, /* None */0, Quote$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* array */["Wonderfully formatted quotes"])),
+                                            ReasonReact.element(/* None */0, /* None */0, Curry.app(Cite$BsSpectacle.make, [
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* None */0,
+                                                      /* array */["Ken Wheeler"]
+                                                    ]))
+                                          ]
                                         ]))])),
                       ReasonReact.element(/* None */0, /* None */0, Slide$BsSpectacle.make(/* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["tertiary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["primary"], /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* None */0, /* Some */["primary"], /* Some */[/* array */[
                                   /* Spin */3,
