@@ -1,39 +1,11 @@
-# :construction: bs-spectacle - [BuckleScript](https://github.com/bucklescript/bucklescript) bindings for [Spectacle](https://github.com/FormidableLabs/spectacle) [![npm (scoped)](https://img.shields.io/npm/v/bs-spectacle.svg?style=flat-square)](https://www.npmjs.com/package/bs-spectacle)
+# bs-spectacle 
+
+## [BuckleScript](https://github.com/bucklescript/bucklescript) bindings for [Spectacle](https://github.com/FormidableLabs/spectacle)
+
+[![npm (scoped)](https://img.shields.io/npm/v/bs-spectacle.svg?style=flat-square)](https://www.npmjs.com/package/bs-spectacle)
+![CircleCI](https://img.shields.io/circleci/project/github/piotrdubiel/bs-spectacle.svg)
 
 ---
-
-## Status
-
-### Components
-- [x] Deck
-- [x] Slide (Base)
-- [x] Notes
-- [x] Layout
-- [x] Fit
-- [x] Fill
-- [x] Markdown
-- [x] Magic
-- [x] Appear
-- [x] BlockQuote, Quote and Cite (Base)
-- [x] CodePane (Base)
-- [x] Code (Base)
-- [x] ComponentPlayground
-- [x] GoToAction (Base)
-- [x] Heading (Base)
-- [x] Image (Base)
-- [x] Link (Base)
-- [x] List & ListItem (Base)
-- [x] S (Base)
-- [x] Table, TableRow, TableBody, TableHeader, TableHeaderItem and TableItem (Base)
-- [x] Text (Base)
-- [x] Typeface
-
-### APIs
-- [x] Theme
-- [x] Transition Function
-- [x] MarkdownSlides
-- [x] Preloader
-- [x] History
 
 ## Example
 
@@ -103,3 +75,39 @@ Easiest way is:
         }
 
 To run it in dev mode, run `npm start` in one shell and `react-scripts start` in another shell.
+
+
+## Status
+
+Every `spectacle` feature is supported.
+
+### Components
+- [x] Deck
+- [x] Slide (Base)
+- [x] Notes
+- [x] Layout
+- [x] Fit
+- [x] Fill
+- [x] Markdown
+- [x] Magic
+- [x] Appear
+- [x] BlockQuote, Quote and Cite (Base)
+- [x] CodePane (Base)
+- [x] Code (Base)
+- [x] ComponentPlayground
+- [x] GoToAction (Base)
+- [x] Heading (Base)
+- [x] Image (Base)
+- [x] Link (Base)
+- [x] List & ListItem (Base)
+- [x] S (Base)
+- [x] Table, TableRow, TableBody, TableHeader, TableHeaderItem and TableItem (Base)
+- [x] Text (Base)
+- [x] Typeface
+
+### APIs
+- [x] Theme
+- [x] Transition Function
+- [x] MarkdownSlides
+- [x] Preloader
+- [x] History
