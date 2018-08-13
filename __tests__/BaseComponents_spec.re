@@ -1,4 +1,4 @@
-let s = ReasonReact.stringToElement;
+let s = ReasonReact.string;
 
 module BlockQuote =
   TestHelpers.MakeBasePropsTest({
