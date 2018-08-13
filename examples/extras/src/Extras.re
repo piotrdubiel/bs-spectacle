@@ -3,12 +3,25 @@ open BsSpectacle;
 let theme =
   Theme.(
     createTheme(
-      {primary: "#26A0D1", secondary: "white", tertiary: "#505050", quarternary: "white"},
       {
-        primary: {name: "Merriweather", googleFont: true, styles: [|"300"|]},
-        secondary: {name: "Roboto", googleFont: true, styles: [|"100"|]},
-        tertiary: simpleFont("monospace")
-      }
+        primary: "#26A0D1",
+        secondary: "white",
+        tertiary: "#505050",
+        quarternary: "white",
+      },
+      {
+        primary: {
+          name: "Merriweather",
+          googleFont: true,
+          styles: [|"300"|],
+        },
+        secondary: {
+          name: "Roboto",
+          googleFont: true,
+          styles: [|"100"|],
+        },
+        tertiary: simpleFont("monospace"),
+      },
     )
   );
 
@@ -25,28 +38,40 @@ let customTransition = (~transitioning, ~forward, ()) => {
     rotate($(rotation)deg)
     |j};
   let backgroundColor = transitioning ? "#fff" : "#26A0D1";
-  ReactDOMRe.Style.make(~transform, ~backgroundColor, ())
+  ReactDOMRe.Style.make(~transform, ~backgroundColor, ());
 };
 
 let history =
-  History.createBrowserHistory({"basename": "", "forceRefresh": Js.false_, "keyLength": 6});
+  History.createBrowserHistory({
+    "basename": "",
+    "forceRefresh": Js.false_,
+    "keyLength": 6,
+  });
 
-let make = (_children) => {
+let make = _children => {
   ...component,
-  render: (_self) =>
+  render: _self =>
     <Deck transition=[|Zoom, Slide|] theme history>
       <Slide transition=[|Custom(customTransition)|]>
         <Notes>
-          <h1> (s("Introduction")) </h1>
-          <ol> <li> (s("Clap your hands")) </li> <li> (s("Say yeah")) </li> </ol>
+          <h1> {s("Introduction")} </h1>
+          <ol>
+            <li> {s("Clap your hands")} </li>
+            <li> {s("Say yeah")} </li>
+          </ol>
         </Notes>
-        <Heading textColor="secondary" textFont="secondary"> (s("Hello, world")) </Heading>
+        <Heading textColor="secondary" textFont="secondary">
+          {s("Hello, world")}
+        </Heading>
       </Slide>
-      <Slide transition=[|Slide|] bgColor="secondary" notes="It will be overwritten">
-        <Notes> (s("Overwriting notes from props")) </Notes>
+      <Slide
+        transition=[|Slide|]
+        bgColor="secondary"
+        notes="It will be overwritten">
+        <Notes> {s("Overwriting notes from props")} </Notes>
         <BlockQuote>
-          <Quote> (s({js|It’s easy, see...|js})) </Quote>
-          <Cite> (s("Unknown")) </Cite>
+          <Quote> {s({js|It’s easy, see...|js})} </Quote>
+          <Cite> {s("Unknown")} </Cite>
         </BlockQuote>
       </Slide>
       <Slide bgColor="secondary">
@@ -78,18 +103,24 @@ render(<HelloWorld name="Spectacle" />)
       </Slide>
       <Magic>
         <Slide bgColor="secondary">
-          <Heading size=3> (s({js|It’s a kind of magic...|js})) </Heading>
+          <Heading size=3> {s({js|It’s a kind of magic...|js})} </Heading>
         </Slide>
-        <Slide bgColor="secondary"> <Code> (s("<Magic></Magic>")) </Code> </Slide>
+        <Slide bgColor="secondary">
+          <Code> {s("<Magic></Magic>")} </Code>
+        </Slide>
       </Magic>
-      <Slide> <S type_=`strikethrough> (s("Not important")) </S> </Slide>
+      <Slide> <S type_=`strikethrough> {s("Not important")} </S> </Slide>
       <Slide bgColor="secondary">
         <Typeface googleFont="Roboto Slab" weight=700>
-          <Text> (s("This text is using bold Roboto Slab from Google Fonts.")) </Text>
+          <Text>
+            {s("This text is using bold Roboto Slab from Google Fonts.")}
+          </Text>
         </Typeface>
         <Typeface font="Helvetica" weight=400 italic=true>
-          <Text> (s("This text is using the Helvetica font from the system.")) </Text>
+          <Text>
+            {s("This text is using the Helvetica font from the system.")}
+          </Text>
         </Typeface>
       </Slide>
-    </Deck>
+    </Deck>,
 };
