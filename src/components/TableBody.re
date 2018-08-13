@@ -1,6 +1,4 @@
-include
-  BaseProps.MakeBaseComponent(
-    {
-      [@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "TableBody";
-    }
-  );
+include BaseProps.MakeBaseComponent({
+  [@bs.module "spectacle"]
+  external reactClass: ReasonReact.reactClass = "TableBody";
+});

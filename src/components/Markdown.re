@@ -1,6 +1,7 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Markdown";
+[@bs.module "spectacle"]
+external reactClass: ReasonReact.reactClass = "Markdown";
 
-[@bs.obj] external makeProps : (~source: string=?, unit) => _ = "";
+[@bs.obj] external makeProps: (~source: string=?, unit) => _ = "";
 
 let make =
     (
@@ -23,7 +24,7 @@ let make =
       ~height=?,
       /* Markdown specific props */
       ~source=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -46,7 +47,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );

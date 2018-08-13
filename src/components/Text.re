@@ -1,8 +1,7 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Text";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "Text";
 
 [@bs.obj]
-external makeProps : (~fit: Js.boolean=?, ~lineHeight: float=?, unit) => _ =
-  "";
+external makeProps: (~fit: Js.boolean=?, ~lineHeight: float=?, unit) => _ = "";
 
 let make =
     (
@@ -26,7 +25,7 @@ let make =
       /* Text specific props */
       ~fit=?,
       ~lineHeight=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -49,7 +48,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );

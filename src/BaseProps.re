@@ -1,5 +1,5 @@
 [@bs.obj]
-external makeBaseProps :
+external makeBaseProps:
   (
     ~italic: Js.boolean=?,
     ~bold: Js.boolean=?,
@@ -42,7 +42,7 @@ let extendProps =
       ~bgDarken=?,
       ~overflow=?,
       ~height=?,
-      moreProps
+      moreProps,
     ) =>
   Object.assign(
     Js.Obj.empty(),
@@ -64,9 +64,9 @@ let extendProps =
       ~bgDarken?,
       ~overflow?,
       ~height?,
-      ()
+      (),
     ),
-    moreProps
+    moreProps,
   );
 
 module type BaseComponent = {let reactClass: ReasonReact.reactClass;};
@@ -91,7 +91,7 @@ module MakeBaseComponent = (BaseComponent: BaseComponent) => {
         ~bgDarken=?,
         ~overflow=?,
         ~height=?,
-        children
+        children,
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass=BaseComponent.reactClass,
@@ -114,8 +114,8 @@ module MakeBaseComponent = (BaseComponent: BaseComponent) => {
           ~bgDarken?,
           ~overflow?,
           ~height?,
-          ()
+          (),
         ),
-      children
+      children,
     );
 };

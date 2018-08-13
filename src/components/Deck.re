@@ -1,7 +1,7 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Deck";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "Deck";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~controls: Js.boolean=?,
     ~contentHeight: int=?,
@@ -32,7 +32,7 @@ let make =
       ~transitionDuration=?,
       ~autoplay=?,
       ~autoplayDuration=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -48,7 +48,7 @@ let make =
         ~transitionDuration?,
         ~autoplay=?Types.to_js_boolean(autoplay),
         ~autoplayDuration?,
-        ()
+        (),
       ),
-    children
+    children,
   );

@@ -1,7 +1,7 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Slide";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "Slide";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~align: string=?,
     ~controlColor: string=?,
@@ -56,7 +56,7 @@ let make =
       ~transitionOut=?,
       ~transitionDuration=?,
       ~getAppearStep=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -77,7 +77,7 @@ let make =
           ~transitionOut=?Types.mapTransitionsToJs(transitionOut),
           ~transitionDuration?,
           ~getAppearStep?,
-          ()
+          (),
         ),
         ~italic?,
         ~bold?,
@@ -95,7 +95,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );

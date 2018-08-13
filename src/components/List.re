@@ -1,8 +1,15 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "List";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "List";
 
 [@bs.obj]
-external makeProps :
-  (~ordered: Js.boolean=?, ~reversed: Js.boolean=?, ~start: int=?, ~_type: string=?, unit) => _ =
+external makeProps:
+  (
+    ~ordered: Js.boolean=?,
+    ~reversed: Js.boolean=?,
+    ~start: int=?,
+    ~_type: string=?,
+    unit
+  ) =>
+  _ =
   "";
 
 let make =
@@ -29,7 +36,7 @@ let make =
       ~reversed=?,
       ~start=?,
       ~type_=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -40,7 +47,7 @@ let make =
           ~reversed=?Types.to_js_boolean(reversed),
           ~start?,
           ~_type=?type_,
-          ()
+          (),
         ),
         ~italic?,
         ~bold?,
@@ -58,7 +65,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );
