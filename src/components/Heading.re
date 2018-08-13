@@ -3,7 +3,7 @@ external reactClass: ReasonReact.reactClass = "Heading";
 
 [@bs.obj]
 external makeProps:
-  (~size: int=?, ~fit: Js.boolean=?, ~lineHeight: float=?, unit) => _ =
+  (~size: int=?, ~fit: bool=?, ~lineHeight: float=?, unit) => _ =
   "";
 
 let make =
@@ -35,7 +35,7 @@ let make =
     ~reactClass,
     ~props=
       BaseProps.extendProps(
-        makeProps(~size?, ~fit=?Types.to_js_boolean(fit), ~lineHeight?, ()),
+        makeProps(~size?, ~fit?, ~lineHeight?, ()),
         ~italic?,
         ~bold?,
         ~caps?,

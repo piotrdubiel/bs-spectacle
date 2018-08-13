@@ -3,8 +3,8 @@
 [@bs.obj]
 external makeProps:
   (
-    ~ordered: Js.boolean=?,
-    ~reversed: Js.boolean=?,
+    ~ordered: bool=?,
+    ~reversed: bool=?,
     ~start: int=?,
     ~_type: string=?,
     unit
@@ -42,13 +42,7 @@ let make =
     ~reactClass,
     ~props=
       BaseProps.extendProps(
-        makeProps(
-          ~ordered=?Types.to_js_boolean(ordered),
-          ~reversed=?Types.to_js_boolean(reversed),
-          ~start?,
-          ~_type=?type_,
-          (),
-        ),
+        makeProps(~ordered?, ~reversed?, ~start?, ~_type=?type_, ()),
         ~italic?,
         ~bold?,
         ~caps?,

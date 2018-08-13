@@ -20,13 +20,7 @@ let transitionToJs = transition =>
   | Fade => Obj.magic("fade")
   | Spin => Obj.magic("spin")
   | Custom(f) =>
-    Obj.magic((transitioning, forward) =>
-      f(
-        ~transitioning=Js.to_bool(transitioning),
-        ~forward=Js.to_bool(forward),
-        (),
-      )
-    )
+    Obj.magic((transitioning, forward) => f(~transitioning, ~forward, ()))
   };
 
 let mapTransitionsToJs = transition =>
@@ -34,5 +28,3 @@ let mapTransitionsToJs = transition =>
     (. transitions) => Array.map(transitionToJs, transitions),
     transition,
   );
-
-let to_js_boolean = Js.Option.map((. a) => Js.Boolean.to_js_boolean(a));

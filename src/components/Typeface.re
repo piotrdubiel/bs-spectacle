@@ -7,7 +7,7 @@ external makeProps:
     ~font: string=?,
     ~googleFont: string=?,
     ~weight: int=?,
-    ~italic: Js.boolean=?,
+    ~italic: bool=?,
     unit
   ) =>
   _ =
@@ -16,13 +16,6 @@ external makeProps:
 let make = (~font=?, ~googleFont=?, ~weight=?, ~italic=?, children) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
-    ~props=
-      makeProps(
-        ~font?,
-        ~googleFont?,
-        ~weight?,
-        ~italic=?Types.to_js_boolean(italic),
-        (),
-      ),
+    ~props=makeProps(~font?, ~googleFont?, ~weight?, ~italic?, ()),
     children,
   );
