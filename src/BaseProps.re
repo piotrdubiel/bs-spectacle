@@ -1,9 +1,9 @@
 [@bs.obj]
-external makeBaseProps :
+external makeBaseProps:
   (
-    ~italic: Js.boolean=?,
-    ~bold: Js.boolean=?,
-    ~caps: Js.boolean=?,
+    ~italic: bool=?,
+    ~bold: bool=?,
+    ~caps: bool=?,
     ~margin: string=?,
     ~padding: string=?,
     ~textColor: string=?,
@@ -42,14 +42,14 @@ let extendProps =
       ~bgDarken=?,
       ~overflow=?,
       ~height=?,
-      moreProps
+      moreProps,
     ) =>
   Object.assign(
     Js.Obj.empty(),
     makeBaseProps(
-      ~italic=?Types.to_js_boolean(italic),
-      ~bold=?Types.to_js_boolean(bold),
-      ~caps=?Types.to_js_boolean(caps),
+      ~italic?,
+      ~bold?,
+      ~caps?,
       ~margin?,
       ~padding?,
       ~textColor?,
@@ -64,9 +64,9 @@ let extendProps =
       ~bgDarken?,
       ~overflow?,
       ~height?,
-      ()
+      (),
     ),
-    moreProps
+    moreProps,
   );
 
 module type BaseComponent = {let reactClass: ReasonReact.reactClass;};
@@ -91,15 +91,15 @@ module MakeBaseComponent = (BaseComponent: BaseComponent) => {
         ~bgDarken=?,
         ~overflow=?,
         ~height=?,
-        children
+        children,
       ) =>
     ReasonReact.wrapJsForReason(
       ~reactClass=BaseComponent.reactClass,
       ~props=
         makeBaseProps(
-          ~italic=?Types.to_js_boolean(italic),
-          ~bold=?Types.to_js_boolean(bold),
-          ~caps=?Types.to_js_boolean(caps),
+          ~italic?,
+          ~bold?,
+          ~caps?,
           ~margin?,
           ~padding?,
           ~textColor?,
@@ -114,8 +114,8 @@ module MakeBaseComponent = (BaseComponent: BaseComponent) => {
           ~bgDarken?,
           ~overflow?,
           ~height?,
-          ()
+          (),
         ),
-      children
+      children,
     );
 };

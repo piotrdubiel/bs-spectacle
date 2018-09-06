@@ -1,10 +1,16 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "GoToAction";
+[@bs.module "spectacle"]
+external reactClass: ReasonReact.reactClass = "GoToAction";
 
 type goToSlideAction = string => unit;
 
 [@bs.obj]
-external makeProps :
-  (~slide: int=?, ~render: goToSlideAction => ReasonReact.reactElement=?, unit) => _ =
+external makeProps:
+  (
+    ~slide: int=?,
+    ~render: goToSlideAction => ReasonReact.reactElement=?,
+    unit
+  ) =>
+  _ =
   "";
 
 let make =
@@ -29,7 +35,7 @@ let make =
       /* GoToAction specific props */
       ~slide=?,
       ~render=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -52,7 +58,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );

@@ -1,6 +1,7 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Link";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "Link";
 
-[@bs.obj] external makeProps : (~href: string, ~target: string=?, unit) => _ = "";
+[@bs.obj]
+external makeProps: (~href: string, ~target: string=?, unit) => _ = "";
 
 let make =
     (
@@ -24,7 +25,7 @@ let make =
       /* Link specific props */
       ~href,
       ~target=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -47,7 +48,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );

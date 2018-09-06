@@ -1,8 +1,15 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Image";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "Image";
 
 [@bs.obj]
-external makeProps :
-  (~src: string, ~alt: string=?, ~display: string=?, ~width: string=?, ~height: string=?, unit) =>
+external makeProps:
+  (
+    ~src: string,
+    ~alt: string=?,
+    ~display: string=?,
+    ~width: string=?,
+    ~height: string=?,
+    unit
+  ) =>
   _ =
   "";
 
@@ -30,7 +37,7 @@ let make =
       ~alt=?,
       ~display=?,
       ~width=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
@@ -53,7 +60,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );

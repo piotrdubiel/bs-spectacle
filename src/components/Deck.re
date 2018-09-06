@@ -1,9 +1,9 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "Deck";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "Deck";
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
-    ~controls: Js.boolean=?,
+    ~controls: bool=?,
     ~contentHeight: int=?,
     ~contentWidth: int=?,
     /* TODO implement history, right now it's abstract*/
@@ -12,7 +12,7 @@ external makeProps :
     ~theme: Theme.theme=?,
     ~transition: array(Types.transition)=?,
     ~transitionDuration: int=?,
-    ~autoplay: Js.boolean=?,
+    ~autoplay: bool=?,
     ~autoplayDuration: int=?,
     unit
   ) =>
@@ -32,13 +32,13 @@ let make =
       ~transitionDuration=?,
       ~autoplay=?,
       ~autoplayDuration=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       makeProps(
-        ~controls=?Types.to_js_boolean(controls),
+        ~controls?,
         ~contentHeight?,
         ~contentWidth?,
         ~history?,
@@ -46,9 +46,9 @@ let make =
         ~theme?,
         ~transition=?Types.mapTransitionsToJs(transition),
         ~transitionDuration?,
-        ~autoplay=?Types.to_js_boolean(autoplay),
+        ~autoplay?,
         ~autoplayDuration?,
-        ()
+        (),
       ),
-    children
+    children,
   );

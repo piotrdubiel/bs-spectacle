@@ -3,6 +3,12 @@ module History = {
 };
 
 [@bs.module "history"]
-external createBrowserHistory :
-  {. "basename": string, "forceRefresh": Js.boolean, "keyLength": int} => History.t =
+external createBrowserHistory:
+  {
+    .
+    "basename": string,
+    "forceRefresh": Js.boolean,
+    "keyLength": int,
+  } =>
+  History.t =
   "";

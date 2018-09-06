@@ -1,2 +1,2 @@
-[@bs.module "spectacle"] external make : string => ReasonReact.reactElement =
-  "MarkdownSlides";
+[@bs.module "spectacle"]
+external make: string => ReasonReact.reactElement = "MarkdownSlides";

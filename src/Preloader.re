@@ -1,1 +1,2 @@
-[@bs.module "spectacle/src/utils/preloader"] external load : 'a => unit = "default";
+[@bs.module "spectacle/src/utils/preloader"]
+external load: 'a => unit = "default";

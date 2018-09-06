@@ -2,7 +2,6 @@
 
 exports[`Appear with fid 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Connect(Appear)
     fid="1"
@@ -70,6 +69,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -88,13 +88,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`Appear with order 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Connect(Appear)
     order={1}
@@ -162,6 +162,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -180,13 +181,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`Appear without props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Connect(Appear) />,
   Symbol(enzyme.__renderer__): Object {
@@ -250,6 +251,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -268,13 +270,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`ComponentPlayground with code 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComponentPlayground
     code="test"
@@ -723,6 +725,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -741,13 +744,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`ComponentPlayground with dark theme 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComponentPlayground
     theme="dark"
@@ -1247,6 +1250,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -1265,13 +1269,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`ComponentPlayground with light theme 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComponentPlayground
     theme="light"
@@ -1771,6 +1775,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -1789,13 +1794,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`ComponentPlayground with preview background color 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComponentPlayground
     previewBackgroundColor="#7315FF"
@@ -2296,6 +2301,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -2314,13 +2320,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`ComponentPlayground with scope 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComponentPlayground
     scope={
@@ -2827,6 +2833,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -2845,13 +2852,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`ComponentPlayground without props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ComponentPlayground
     theme="dark"
@@ -3351,6 +3358,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3369,13 +3377,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`Fill with props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Styled(div) />,
   Symbol(enzyme.__renderer__): Object {
@@ -3415,6 +3423,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3433,13 +3442,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`Fit with props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Styled(div) />,
   Symbol(enzyme.__renderer__): Object {
@@ -3479,6 +3488,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3497,13 +3507,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`Layout with props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Layout />,
   Symbol(enzyme.__renderer__): Object {
@@ -3545,6 +3555,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3563,13 +3574,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`Notes with props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Notes>
     test
@@ -3591,6 +3602,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3609,13 +3621,13 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;
 
 exports[`SlideSet with props 1`] = `
 ShallowWrapper {
-  "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <SlideSet
     hasSlideChildren={true}
@@ -3657,6 +3669,7 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
+    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3675,6 +3688,7 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
+    "hydrateIn": undefined,
   },
 }
 `;

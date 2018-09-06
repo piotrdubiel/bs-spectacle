@@ -5,37 +5,37 @@ type colorsDefinition = {
   primary: string,
   secondary: string,
   tertiary: string,
-  quarternary: string
+  quarternary: string,
 };
 
 [@bs.deriving {jsConverter: newType}]
 type fontDefinition = {
   name: string,
   googleFont: bool,
-  styles: array(string)
+  styles: array(string),
 };
 
 type fontsDefinition = {
   primary: fontDefinition,
   secondary: fontDefinition,
-  tertiary: fontDefinition
+  tertiary: fontDefinition,
 };
 
-let fontsDefinitionToJs = (fonts) => {
+let fontsDefinitionToJs = fonts => {
   "primary": fontDefinitionToJs(fonts.primary),
   "secondary": fontDefinitionToJs(fonts.secondary),
-  "tertiary": fontDefinitionToJs(fonts.tertiary)
+  "tertiary": fontDefinitionToJs(fonts.tertiary),
 };
 
 [@bs.module "spectacle/lib/themes/default"]
-external _createTheme :
+external _createTheme:
   (
     abs_colorsDefinition,
     {
       .
       "primary": abs_fontDefinition,
       "secondary": abs_fontDefinition,
-      "tertiary": abs_fontDefinition
+      "tertiary": abs_fontDefinition,
     }
   ) =>
   theme =

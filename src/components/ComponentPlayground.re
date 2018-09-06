@@ -1,21 +1,19 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "ComponentPlayground";
+[@bs.module "spectacle"]
+external reactClass: ReasonReact.reactClass = "ComponentPlayground";
 
 type componentPlaygroundTheme =
   | Light
   | Dark;
 
 let componentPlaygroundThemeToJs =
-  [@bs]
-  (
-    (theme) =>
-      switch theme {
-      | Light => "light"
-      | Dark => "dark"
-      }
-  );
+  (. theme) =>
+    switch (theme) {
+    | Light => "light"
+    | Dark => "dark"
+    };
 
 [@bs.obj]
-external makeProps :
+external makeProps:
   (
     ~code: string=?,
     ~previewBackgroundColor: string=?,
@@ -35,7 +33,7 @@ let make = (~code=?, ~previewBackgroundColor=?, ~theme=?, ~scope=?, children) =>
         ~previewBackgroundColor?,
         ~theme=?Js.Option.map(componentPlaygroundThemeToJs, theme),
         ~scope?,
-        ()
+        (),
       ),
-    children
+    children,
   );

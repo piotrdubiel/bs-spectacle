@@ -1,7 +1,6 @@
-[@bs.module "spectacle"] external reactClass : ReasonReact.reactClass = "S";
+[@bs.module "spectacle"] external reactClass: ReasonReact.reactClass = "S";
 
-[@bs.obj]
-external makeProps : (~_type: string=?, unit) => _ = "";
+[@bs.obj] external makeProps: (~_type: string=?, unit) => _ = "";
 
 [@bs.deriving jsConverter]
 type sType = [ | `strikethrough | `underline | `bold | `italic];
@@ -29,12 +28,12 @@ let make =
       ~height=?,
       /* S specific props */
       ~type_: option(sType)=?,
-      children
+      children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
-    BaseProps.extendProps(
+      BaseProps.extendProps(
         makeProps(~_type=?Js.Option.map(mapSTypeToJs, type_), ()),
         ~italic?,
         ~bold?,
@@ -52,7 +51,7 @@ let make =
         ~bgRepeat?,
         ~bgDarken?,
         ~overflow?,
-        ~height?
+        ~height?,
       ),
-    children
+    children,
   );
