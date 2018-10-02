@@ -41,7 +41,7 @@ let images: images = {
 
 Preloader.load(images);
 
-let s = ReasonReact.stringToElement;
+let s = ReasonReact.string;
 
 type state = {steps: int};
 

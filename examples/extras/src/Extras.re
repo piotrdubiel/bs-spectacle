@@ -25,7 +25,7 @@ let theme =
     )
   );
 
-let s = ReasonReact.stringToElement;
+let s = ReasonReact.string;
 
 let component = ReasonReact.statelessComponent("Extras");
 
