@@ -3,7 +3,14 @@ external reactClass: ReasonReact.reactClass = "CodePane";
 
 [@bs.obj]
 external makeProps:
-  (~lang: string, ~source: string, ~theme: string=?, unit) => _ =
+  (
+    ~lang: string,
+    ~source: string,
+    ~contentEditable: bool=?,
+    ~theme: string=?,
+    unit
+  ) =>
+  _ =
   "";
 
 let make =
@@ -28,6 +35,7 @@ let make =
       /* CodePane specific props */
       ~lang,
       ~source,
+      ~contentEditable=?,
       ~theme=?,
       children,
     ) =>
@@ -35,7 +43,7 @@ let make =
     ~reactClass,
     ~props=
       BaseProps.extendProps(
-        makeProps(~lang, ~source, ~theme?, ()),
+        makeProps(~lang, ~source, ~contentEditable?, ~theme?, ()),
         ~italic?,
         ~bold?,
         ~caps?,
