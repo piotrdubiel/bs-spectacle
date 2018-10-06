@@ -1,7 +1,10 @@
 [@bs.module "spectacle"]
 external reactClass: ReasonReact.reactClass = "CodePane";
 
-[@bs.obj] external makeProps: (~lang: string, ~source: string, ~theme: string=?, unit) => _ = "";
+[@bs.obj]
+external makeProps:
+  (~lang: string, ~source: string, ~theme: string=?, unit) => _ =
+  "";
 
 let make =
     (
