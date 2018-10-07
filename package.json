@@ -23,17 +23,18 @@
     "url": "https://github.com/piotrdubiel/bs-spectacle.git"
   },
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.4.4",
-    "bs-enzyme": "^0.5.1",
+    "bs-enzyme": "^0.4.0",
+    "bs-jest": "^0.3.2",
     "bs-platform": "^4.0.5",
     "bs-react-test-renderer": "^2.0.0",
-    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.2",
     "reason-react": "^0.5.3",
-    "spectacle": "^5.0.0"
+    "spectacle": "^4.0.4"
   },
   "peerDependencies": {
-    "reason-react": "^0.5.3",
-    "spectacle": "^5.0.0"
+    "spectacle": "^4.0.4",
+    "reason-react": "^0.5.3"
   },
   "jest": {
     "testPathIgnorePatterns": [
