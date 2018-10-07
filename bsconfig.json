@@ -20,5 +20,5 @@
     }
   ],
   "bs-dependencies": ["reason-react"],
-  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-enzyme"]
+  "bs-dev-dependencies": ["bs-enzyme", "bs-jest"]
 }

@@ -1,17 +1,7 @@
 [@bs.module "spectacle"]
 external reactClass: ReasonReact.reactClass = "CodePane";
 
-[@bs.obj]
-external makeProps:
-  (
-    ~lang: string,
-    ~source: string,
-    ~contentEditable: bool=?,
-    ~theme: string=?,
-    unit
-  ) =>
-  _ =
-  "";
+[@bs.obj] external makeProps: (~lang: string, ~source: string, unit) => _ = "";
 
 let make =
     (
@@ -35,15 +25,13 @@ let make =
       /* CodePane specific props */
       ~lang,
       ~source,
-      ~contentEditable=?,
-      ~theme=?,
       children,
     ) =>
   ReasonReact.wrapJsForReason(
     ~reactClass,
     ~props=
       BaseProps.extendProps(
-        makeProps(~lang, ~source, ~contentEditable?, ~theme?, ()),
+        makeProps(~lang, ~source, ()),
         ~italic?,
         ~bold?,
         ~caps?,

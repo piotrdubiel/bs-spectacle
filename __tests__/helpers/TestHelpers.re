@@ -1,5 +1,5 @@
 [@bs.module "enzyme"]
-external shallow: (Enzyme.node, Js.t({..})) => Enzyme.Shallow.t = "";
+external shallow: (Enzyme.node, Js.t({..})) => Enzyme.shallowWrapper = "";
 
 Enzyme.configureEnzyme(Enzyme.react_16_adapter());
 
