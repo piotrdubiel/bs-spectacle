@@ -1,6 +1,6 @@
 open BsSpectacle;
 
-let s = ReasonReact.stringToElement;
+let s = ReasonReact.string;
 
 type action =
   | Increment;
