@@ -3,13 +3,26 @@
 exports[`Appear with fid 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Appear)
+  Symbol(enzyme.__unrendered__): <Appear
+    easing="quadInOut"
+    endValue={
+      Object {
+        "opacity": 1,
+      }
+    }
     fid="1"
+    startValue={
+      Object {
+        "opacity": 0,
+      }
+    }
+    transitionDuration={300}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -18,19 +31,24 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "dispatch": [Function],
+      "children": undefined,
       "easing": "quadInOut",
       "endValue": Object {
         "opacity": 1,
       },
       "fid": "1",
-      "route": Object {
-        "slide": 0,
+      "fromStyle": Object {
+        "opacity": 0,
       },
       "startValue": Object {
         "opacity": 0,
       },
-      "style": Object {},
+      "style": undefined,
+      "toStyle": Array [
+        Object {
+          "opacity": 1,
+        },
+      ],
       "transitionDuration": 300,
     },
     "ref": null,
@@ -43,19 +61,24 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "dispatch": [Function],
+        "children": undefined,
         "easing": "quadInOut",
         "endValue": Object {
           "opacity": 1,
         },
         "fid": "1",
-        "route": Object {
-          "slide": 0,
+        "fromStyle": Object {
+          "opacity": 0,
         },
         "startValue": Object {
           "opacity": 0,
         },
-        "style": Object {},
+        "style": undefined,
+        "toStyle": Array [
+          Object {
+            "opacity": 1,
+          },
+        ],
         "transitionDuration": 300,
       },
       "ref": null,
@@ -67,9 +90,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -88,7 +120,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -96,13 +127,26 @@ ShallowWrapper {
 exports[`Appear with order 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Appear)
+  Symbol(enzyme.__unrendered__): <Appear
+    easing="quadInOut"
+    endValue={
+      Object {
+        "opacity": 1,
+      }
+    }
     order={1}
+    startValue={
+      Object {
+        "opacity": 0,
+      }
+    }
+    transitionDuration={300}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -111,19 +155,24 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "dispatch": [Function],
+      "children": undefined,
       "easing": "quadInOut",
       "endValue": Object {
         "opacity": 1,
       },
-      "order": 1,
-      "route": Object {
-        "slide": 0,
+      "fromStyle": Object {
+        "opacity": 0,
       },
+      "order": 1,
       "startValue": Object {
         "opacity": 0,
       },
-      "style": Object {},
+      "style": undefined,
+      "toStyle": Array [
+        Object {
+          "opacity": 1,
+        },
+      ],
       "transitionDuration": 300,
     },
     "ref": null,
@@ -136,19 +185,24 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "dispatch": [Function],
+        "children": undefined,
         "easing": "quadInOut",
         "endValue": Object {
           "opacity": 1,
         },
-        "order": 1,
-        "route": Object {
-          "slide": 0,
+        "fromStyle": Object {
+          "opacity": 0,
         },
+        "order": 1,
         "startValue": Object {
           "opacity": 0,
         },
-        "style": Object {},
+        "style": undefined,
+        "toStyle": Array [
+          Object {
+            "opacity": 1,
+          },
+        ],
         "transitionDuration": 300,
       },
       "ref": null,
@@ -160,9 +214,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -181,7 +244,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -189,11 +251,25 @@ ShallowWrapper {
 exports[`Appear without props 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Connect(Appear) />,
+  Symbol(enzyme.__unrendered__): <Appear
+    easing="quadInOut"
+    endValue={
+      Object {
+        "opacity": 1,
+      }
+    }
+    startValue={
+      Object {
+        "opacity": 0,
+      }
+    }
+    transitionDuration={300}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -202,18 +278,23 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "class",
     "props": Object {
-      "dispatch": [Function],
+      "children": undefined,
       "easing": "quadInOut",
       "endValue": Object {
         "opacity": 1,
       },
-      "route": Object {
-        "slide": 0,
+      "fromStyle": Object {
+        "opacity": 0,
       },
       "startValue": Object {
         "opacity": 0,
       },
-      "style": Object {},
+      "style": undefined,
+      "toStyle": Array [
+        Object {
+          "opacity": 1,
+        },
+      ],
       "transitionDuration": 300,
     },
     "ref": null,
@@ -226,18 +307,23 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "class",
       "props": Object {
-        "dispatch": [Function],
+        "children": undefined,
         "easing": "quadInOut",
         "endValue": Object {
           "opacity": 1,
         },
-        "route": Object {
-          "slide": 0,
+        "fromStyle": Object {
+          "opacity": 0,
         },
         "startValue": Object {
           "opacity": 0,
         },
-        "style": Object {},
+        "style": undefined,
+        "toStyle": Array [
+          Object {
+            "opacity": 1,
+          },
+        ],
         "transitionDuration": 300,
       },
       "ref": null,
@@ -249,9 +335,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -270,7 +365,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -286,6 +380,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -314,17 +409,13 @@ ShallowWrapper {
           onKeyUp={[Function]}
         >
           <Styled(div)>
-            <Styled(Component)
-              previewBackgroundColor={undefined}
-            />
+            <Styled(Component) />
             <Styled(LiveError) />
           </Styled(div)>
           <Styled(div)>
             <Styled(Component)
               className="language-jsx builtin-prism-theme"
               onChange={[Function]}
-              prismTheme={undefined}
-              syntaxStyles={undefined}
             />
           </Styled(div)>
         </Styled(div)>,
@@ -411,17 +502,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>,
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>,
           ],
@@ -437,9 +524,7 @@ ShallowWrapper {
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />,
+                <Styled(Component) />,
                 <Styled(LiveError) />,
               ],
             },
@@ -476,8 +561,6 @@ ShallowWrapper {
               "children": <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />,
             },
             "ref": null,
@@ -529,17 +612,13 @@ ShallowWrapper {
             onKeyUp={[Function]}
           >
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>
           </Styled(div)>,
@@ -626,17 +705,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Styled(div)>
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />
+                <Styled(Component) />
                 <Styled(LiveError) />
               </Styled(div)>,
               <Styled(div)>
                 <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />
               </Styled(div)>,
             ],
@@ -652,9 +727,7 @@ ShallowWrapper {
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <Styled(Component)
-                    previewBackgroundColor={undefined}
-                  />,
+                  <Styled(Component) />,
                   <Styled(LiveError) />,
                 ],
               },
@@ -691,8 +764,6 @@ ShallowWrapper {
                 "children": <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />,
               },
               "ref": null,
@@ -723,9 +794,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -744,7 +824,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -759,6 +838,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -787,17 +867,13 @@ ShallowWrapper {
           onKeyUp={[Function]}
         >
           <Styled(div)>
-            <Styled(Component)
-              previewBackgroundColor={undefined}
-            />
+            <Styled(Component) />
             <Styled(LiveError) />
           </Styled(div)>
           <Styled(div)>
             <Styled(Component)
               className="language-jsx builtin-prism-theme"
               onChange={[Function]}
-              prismTheme={undefined}
-              syntaxStyles={undefined}
             />
           </Styled(div)>
         </Styled(div)>,
@@ -910,17 +986,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "props": Object {
           "children": Array [
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>,
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>,
           ],
@@ -936,9 +1008,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />,
+                <Styled(Component) />,
                 <Styled(LiveError) />,
               ],
             },
@@ -975,8 +1045,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "children": <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />,
             },
             "ref": null,
@@ -1028,17 +1096,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             onKeyUp={[Function]}
           >
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>
           </Styled(div)>,
@@ -1151,17 +1215,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
           "props": Object {
             "children": Array [
               <Styled(div)>
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />
+                <Styled(Component) />
                 <Styled(LiveError) />
               </Styled(div)>,
               <Styled(div)>
                 <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />
               </Styled(div)>,
             ],
@@ -1177,9 +1237,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <Styled(Component)
-                    previewBackgroundColor={undefined}
-                  />,
+                  <Styled(Component) />,
                   <Styled(LiveError) />,
                 ],
               },
@@ -1216,8 +1274,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
                 "children": <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />,
               },
               "ref": null,
@@ -1248,9 +1304,18 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -1269,7 +1334,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -1284,6 +1348,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -1312,17 +1377,13 @@ ShallowWrapper {
           onKeyUp={[Function]}
         >
           <Styled(div)>
-            <Styled(Component)
-              previewBackgroundColor={undefined}
-            />
+            <Styled(Component) />
             <Styled(LiveError) />
           </Styled(div)>
           <Styled(div)>
             <Styled(Component)
               className="language-jsx builtin-prism-theme"
               onChange={[Function]}
-              prismTheme={undefined}
-              syntaxStyles={undefined}
             />
           </Styled(div)>
         </Styled(div)>,
@@ -1435,17 +1496,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "props": Object {
           "children": Array [
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>,
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>,
           ],
@@ -1461,9 +1518,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />,
+                <Styled(Component) />,
                 <Styled(LiveError) />,
               ],
             },
@@ -1500,8 +1555,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "children": <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />,
             },
             "ref": null,
@@ -1553,17 +1606,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             onKeyUp={[Function]}
           >
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>
           </Styled(div)>,
@@ -1676,17 +1725,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
           "props": Object {
             "children": Array [
               <Styled(div)>
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />
+                <Styled(Component) />
                 <Styled(LiveError) />
               </Styled(div)>,
               <Styled(div)>
                 <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />
               </Styled(div)>,
             ],
@@ -1702,9 +1747,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <Styled(Component)
-                    previewBackgroundColor={undefined}
-                  />,
+                  <Styled(Component) />,
                   <Styled(LiveError) />,
                 ],
               },
@@ -1741,8 +1784,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
                 "children": <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />,
               },
               "ref": null,
@@ -1773,9 +1814,18 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -1794,7 +1844,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -1810,6 +1859,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -1847,8 +1897,6 @@ ShallowWrapper {
             <Styled(Component)
               className="language-jsx builtin-prism-theme"
               onChange={[Function]}
-              prismTheme={undefined}
-              syntaxStyles={undefined}
             />
           </Styled(div)>
         </Styled(div)>,
@@ -1970,8 +2018,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>,
           ],
@@ -2026,8 +2072,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "children": <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />,
             },
             "ref": null,
@@ -2088,8 +2132,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>
           </Styled(div)>,
@@ -2211,8 +2253,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
                 <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />
               </Styled(div)>,
             ],
@@ -2267,8 +2307,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
                 "children": <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />,
               },
               "ref": null,
@@ -2299,9 +2337,18 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -2320,7 +2367,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -2340,6 +2386,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -2368,17 +2415,13 @@ ShallowWrapper {
           onKeyUp={[Function]}
         >
           <Styled(div)>
-            <Styled(Component)
-              previewBackgroundColor={undefined}
-            />
+            <Styled(Component) />
             <Styled(LiveError) />
           </Styled(div)>
           <Styled(div)>
             <Styled(Component)
               className="language-jsx builtin-prism-theme"
               onChange={[Function]}
-              prismTheme={undefined}
-              syntaxStyles={undefined}
             />
           </Styled(div)>
         </Styled(div)>,
@@ -2492,17 +2535,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "props": Object {
           "children": Array [
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>,
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>,
           ],
@@ -2518,9 +2557,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />,
+                <Styled(Component) />,
                 <Styled(LiveError) />,
               ],
             },
@@ -2557,8 +2594,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "children": <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />,
             },
             "ref": null,
@@ -2610,17 +2645,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             onKeyUp={[Function]}
           >
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>
           </Styled(div)>,
@@ -2734,17 +2765,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
           "props": Object {
             "children": Array [
               <Styled(div)>
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />
+                <Styled(Component) />
                 <Styled(LiveError) />
               </Styled(div)>,
               <Styled(div)>
                 <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />
               </Styled(div)>,
             ],
@@ -2760,9 +2787,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <Styled(Component)
-                    previewBackgroundColor={undefined}
-                  />,
+                  <Styled(Component) />,
                   <Styled(LiveError) />,
                 ],
               },
@@ -2799,8 +2824,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
                 "children": <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />,
               },
               "ref": null,
@@ -2831,9 +2854,18 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -2852,7 +2884,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -2867,6 +2898,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -2895,17 +2927,13 @@ ShallowWrapper {
           onKeyUp={[Function]}
         >
           <Styled(div)>
-            <Styled(Component)
-              previewBackgroundColor={undefined}
-            />
+            <Styled(Component) />
             <Styled(LiveError) />
           </Styled(div)>
           <Styled(div)>
             <Styled(Component)
               className="language-jsx builtin-prism-theme"
               onChange={[Function]}
-              prismTheme={undefined}
-              syntaxStyles={undefined}
             />
           </Styled(div)>
         </Styled(div)>,
@@ -3018,17 +3046,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "props": Object {
           "children": Array [
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>,
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>,
           ],
@@ -3044,9 +3068,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             "nodeType": "class",
             "props": Object {
               "children": Array [
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />,
+                <Styled(Component) />,
                 <Styled(LiveError) />,
               ],
             },
@@ -3083,8 +3105,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "children": <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />,
             },
             "ref": null,
@@ -3136,17 +3156,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
             onKeyUp={[Function]}
           >
             <Styled(div)>
-              <Styled(Component)
-                previewBackgroundColor={undefined}
-              />
+              <Styled(Component) />
               <Styled(LiveError) />
             </Styled(div)>
             <Styled(div)>
               <Styled(Component)
                 className="language-jsx builtin-prism-theme"
                 onChange={[Function]}
-                prismTheme={undefined}
-                syntaxStyles={undefined}
               />
             </Styled(div)>
           </Styled(div)>,
@@ -3259,17 +3275,13 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
           "props": Object {
             "children": Array [
               <Styled(div)>
-                <Styled(Component)
-                  previewBackgroundColor={undefined}
-                />
+                <Styled(Component) />
                 <Styled(LiveError) />
               </Styled(div)>,
               <Styled(div)>
                 <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />
               </Styled(div)>,
             ],
@@ -3285,9 +3297,7 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
               "nodeType": "class",
               "props": Object {
                 "children": Array [
-                  <Styled(Component)
-                    previewBackgroundColor={undefined}
-                  />,
+                  <Styled(Component) />,
                   <Styled(LiveError) />,
                 ],
               },
@@ -3324,8 +3334,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
                 "children": <Styled(Component)
                   className="language-jsx builtin-prism-theme"
                   onChange={[Function]}
-                  prismTheme={undefined}
-                  syntaxStyles={undefined}
                 />,
               },
               "ref": null,
@@ -3356,9 +3364,18 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3377,7 +3394,6 @@ render(<HelloWorld name=\\"Spectacle\\" />)",
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -3390,6 +3406,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -3398,7 +3415,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "css-1rr4qq7 e153wlam0",
+      "className": "css-1rr4qq7 e1168zu30",
     },
     "ref": null,
     "rendered": null,
@@ -3410,7 +3427,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "css-1rr4qq7 e153wlam0",
+        "className": "css-1rr4qq7 e1168zu30",
       },
       "ref": null,
       "rendered": null,
@@ -3421,9 +3438,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3442,7 +3468,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -3455,6 +3480,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -3463,7 +3489,7 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "className": "css-72fd9l e27tuvw0",
+      "className": "css-72fd9l e1ch6bqf0",
     },
     "ref": null,
     "rendered": null,
@@ -3475,7 +3501,7 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "className": "css-72fd9l e27tuvw0",
+        "className": "css-72fd9l e1ch6bqf0",
       },
       "ref": null,
       "rendered": null,
@@ -3486,9 +3512,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3507,7 +3542,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -3520,6 +3554,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -3553,9 +3588,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3574,7 +3618,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -3589,6 +3632,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -3600,9 +3644,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3621,7 +3674,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
@@ -3636,6 +3688,7 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -3667,9 +3720,18 @@ ShallowWrapper {
     "adapter": ReactSixteenAdapter {
       "options": Object {
         "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
       },
     },
-    "attachTo": undefined,
     "context": Object {
       "store": Object {
         "dispatch": [Function],
@@ -3688,7 +3750,6 @@ ShallowWrapper {
         "prism": Object {},
       },
     },
-    "hydrateIn": undefined,
   },
 }
 `;
